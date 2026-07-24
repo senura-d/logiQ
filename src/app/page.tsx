@@ -21,7 +21,7 @@ export default function HomePage() {
             style={{ objectFit: "cover", objectPosition: "center" }}
             priority
           />
-          {/* White Fade Gradient Overlay */}
+          {/* White Fade Gradient Overlay on Left Side Fading Out in the Middle */}
           <div
             className="hero-backdrop-overlay"
             style={{
@@ -69,63 +69,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED BANNER IMAGE SHOWCASE */}
+      {/* SECTION 2: VIDEO SHOWCASE */}
       <section className="section" style={{ padding: "40px 0 0 0" }}>
         <div className="container">
           <div
             style={{
               position: "relative",
               width: "100%",
-              height: 480,
               borderRadius: 20,
               overflow: "hidden",
-              boxShadow: "0 20px 50px rgba(0,0,0,0.08)",
+              boxShadow: "0 20px 50px rgba(0,0,0,0.12)",
               border: "1px solid var(--border-color, rgba(0,0,0,0.08))",
+              background: "#000000",
             }}
           >
-            <Image
-              src="/images/home-banner.png"
-              alt="LogiQ-On Modern Warehouse Technology & Hardware Platform"
-              fill
-              sizes="100vw"
-              style={{ objectFit: "cover" }}
-            />
-            <div
+            <video
+              src="/video/home-showcase.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
               style={{
-                position: "absolute",
-                inset: 0,
-                background: "linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 60%, transparent 100%)",
-                display: "flex",
-                alignItems: "flex-end",
-                padding: "36px 40px",
+                width: "100%",
+                height: "auto",
+                maxHeight: 640,
+                display: "block",
+                objectFit: "cover",
               }}
+              aria-label="LogiQ-On Technology Operations Video"
             >
-              <div>
-                <span
-                  style={{
-                    fontSize: 12,
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    letterSpacing: 1,
-                    padding: "4px 12px",
-                    borderRadius: 20,
-                    background: "rgba(76, 58, 227, 0.12)",
-                    color: "var(--indigo, #4C3AE3)",
-                    border: "1px solid rgba(76, 58, 227, 0.25)",
-                    display: "inline-block",
-                    marginBottom: 10,
-                  }}
-                >
-                  Next-Gen Supply Chain Platform
-                </span>
-                <h3 style={{ fontSize: 28, color: "var(--ink, #0f172a)", marginBottom: 6 }}>
-                  Integrated Mobile Computing, RFID &amp; Label Printing Systems
-                </h3>
-                <p style={{ color: "var(--ink-soft, #475569)", fontSize: 15, margin: 0, maxWidth: 640 }}>
-                  Deploy robust, floor-proven hardware engineered for Australian logistics, retail, and manufacturing operations.
-                </p>
-              </div>
-            </div>
+              Your browser does not support embedded HTML5 video.
+            </video>
           </div>
         </div>
       </section>

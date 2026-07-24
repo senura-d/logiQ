@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 type Role = "customer" | "vendor";
 
@@ -156,7 +157,7 @@ export default function LoginView() {
             <div style={{ marginBottom: 40 }}>
               <Link href="/">
                 <Image
-                  src="/images/logo.png"
+                  src={getAssetPath("/images/logo.png")}
                   alt="LogiQ-On Logo"
                   width={150}
                   height={42}

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/nav";
 
 export default function Brand() {
   return (
     <Link href="/" className="brand" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
       <Image
-        src="/images/logo.png"
+        src={getAssetPath("/images/logo.png")}
         alt="LogiQ-On Logo"
         width={160}
         height={45}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   description:
@@ -14,7 +15,7 @@ export default function HomePage() {
       <section className="hero hero-backdrop-section" style={{ position: "relative", overflow: "hidden" }}>
         <div className="hero-backdrop-image">
           <Image
-            src="/images/home-banner.png"
+            src={getAssetPath("/images/home-banner.png")}
             alt="LogiQ-On Supply Chain and Warehouse Technology Showcase"
             fill
             sizes="100vw"
@@ -74,7 +75,7 @@ export default function HomePage() {
         <div className="video-fullscreen" style={{ width: "100%", height: "calc(100vh - 72px)", minHeight: 480, position: "relative", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "#ffffff" }}>
           <video
             className="video-fullscreen-media"
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/video/home-showcase.mp4`}
+            src={getAssetPath("/video/home-showcase.mp4")}
             autoPlay
             muted
             loop
@@ -178,7 +179,7 @@ export default function HomePage() {
           </div>
           <div className="split-visual scan-panel" style={{ padding: 32, minHeight: 300, display: "flex", alignItems: "flex-end", position: "relative", overflow: "hidden", borderRadius: 16 }}>
             <Image
-              src="/images/home-banner.png"
+              src={getAssetPath("/images/home-banner.png")}
               alt="Warehouse discovery and wireless site survey"
               fill
               sizes="(max-width: 880px) 100vw, 50vw"

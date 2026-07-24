@@ -39,7 +39,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       interfaces: ["USB 2.0", "Serial", "10/100 Ethernet"],
       mediaHandling: "Standard Tear-off, optional Peeler",
     },
-    image: "/images/products/desktop-printers/bixolon-xd3-40.jpg",
+    image: "/images/products/desktop-printers/bixolon-xd3-40.png",
     highlighted: true,
   },
   {
@@ -59,7 +59,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       interfaces: ["USB 2.0", "USB Host", "Ethernet", "WLAN 802.11a/b/g/n", "Bluetooth"],
       mediaHandling: "Auto-cutter, Peeler, Adjustable sensors",
     },
-    image: "/images/products/desktop-printers/bixolon-xd5-40.jpg",
+    image: "/images/products/desktop-printers/bixolon-xd3-40.png",
   },
   {
     id: "bixolon-slp-dx420",
@@ -78,7 +78,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       interfaces: ["USB", "Serial", "Parallel", "Ethernet", "WLAN"],
       mediaHandling: "Peel dispenser, Auto-cutter options",
     },
-    image: "/images/products/desktop-printers/bixolon-slp-dx420.jpg",
+    image: "/images/products/desktop-printers/bixolon-xd3-40.png",
   },
   {
     id: "bixolon-slp-tx420",
@@ -97,7 +97,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       ribbonCapacity: "Up to 74 m (242 ft)",
       interfaces: ["USB", "Serial", "Ethernet", "Bluetooth"],
     },
-    image: "/images/products/desktop-printers/bixolon-slp-tx420.jpg",
+    image: "/images/products/desktop-printers/bixolon-xd3-40.png",
   },
   {
     id: "honeywell-pc42t-plus",
@@ -116,7 +116,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       ribbonCapacity: "300 m (984 ft) / 100 m (328 ft)",
       interfaces: ["USB Device", "USB Host", "Serial", "Ethernet"],
     },
-    image: "/images/products/desktop-printers/honeywell-pc42t.jpg",
+    image: "/images/products/desktop-printers/honeywell-pc42t.png",
     highlighted: true,
   },
   {
@@ -136,7 +136,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       interfaces: ["USB Device", "USB Host", "Serial", "Ethernet"],
       mediaHandling: "Auto-centering paper feed",
     },
-    image: "/images/products/desktop-printers/honeywell-pc42d.jpg",
+    image: "/images/products/desktop-printers/honeywell-pc42t.png",
   },
   {
     id: "honeywell-e-class-mark-iii",
@@ -154,7 +154,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       printWidth: "108 mm (4.25 in)",
       interfaces: ["USB", "Serial", "Parallel", "Ethernet", "Wireless 802.11b/g"],
     },
-    image: "/images/products/desktop-printers/honeywell-e-class-mark-iii.jpg",
+    image: "/images/products/desktop-printers/honeywell-pc42t.png",
   },
   {
     id: "honeywell-pc43t",
@@ -173,7 +173,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       interfaces: ["USB Host", "USB Device", "Ethernet", "Bluetooth 4.0", "Wi-Fi"],
       mediaHandling: "Drop-in media loading",
     },
-    image: "/images/products/desktop-printers/honeywell-pc43t.jpg",
+    image: "/images/products/desktop-printers/honeywell-pc42t.png",
   },
   {
     id: "zebra-zd621",
@@ -192,7 +192,7 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       interfaces: ["USB", "USB Host", "Ethernet", "Serial", "Wi-Fi 802.11ac", "Bluetooth 4.1"],
       mediaHandling: "Peeler, Cutter, RFID Encoder options",
     },
-    image: "/images/products/desktop-printers/zebra-zd600-series.jpg",
+    image: "/images/products/desktop-printers/zebra-zd621.png",
     highlighted: true,
   },
   {
@@ -211,6 +211,6 @@ export const DESKTOP_PRINTERS: DesktopPrinter[] = [
       printWidth: "104 mm (4.09 in)",
       interfaces: ["USB", "USB Host", "Modular Ethernet", "Wi-Fi", "Bluetooth 4.1"],
     },
-    image: "/images/products/desktop-printers/zebra-zd600-series.jpg",
+    image: "/images/products/desktop-printers/zebra-zd621.png",
   },
 ];

@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="video-fullscreen" style={{ width: "100%", height: "calc(100vh - 72px)", minHeight: 480, position: "relative", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "#ffffff" }}>
           <video
             className="video-fullscreen-media"
-            src="/video/home-showcase.mp4"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/video/home-showcase.mp4`}
             autoPlay
             muted
             loop

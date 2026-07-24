@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="hero hero-backdrop-section">
+      {/* HERO WITH ELEGANT WHITE FADE OVERLAY */}
+      <section className="hero hero-backdrop-section" style={{ position: "relative", overflow: "hidden" }}>
         <div className="hero-backdrop-image">
           <Image
             src="/images/home-banner.png"
@@ -21,37 +21,48 @@ export default function HomePage() {
             style={{ objectFit: "cover", objectPosition: "center" }}
             priority
           />
-          <div className="hero-backdrop-overlay" style={{ background: "linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.4) 100%)" }} />
+          {/* White Fade Gradient Overlay */}
+          <div
+            className="hero-backdrop-overlay"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.4) 50%, transparent 70%)",
+            }}
+          />
         </div>
 
         <div className="container hero-backdrop-content">
-          <span className="eyebrow" style={{ color: "var(--brand-primary, #0ce3fb)" }}>Australian Supply Chain Tech &middot; Since 2020</span>
-          <h1 style={{ color: "#ffffff" }}>
+          <span className="eyebrow" style={{ color: "var(--indigo, #4C3AE3)" }}>
+            Australian Supply Chain Tech &middot; Since 2020
+          </span>
+          <h1 style={{ color: "var(--ink, #0f172a)", textShadow: "0 1px 2px rgba(255,255,255,0.8)" }}>
             Give your warehouse
             <br />a faster reflex.
           </h1>
-          <p className="lede" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+          <p className="lede" style={{ color: "var(--ink-soft, #475569)", fontWeight: 500 }}>
             LogiQ-On sources, installs, and supports the barcode, RFID, wireless, and digital signage systems that
             turn slow, paper-heavy operations into ones that scan, track, and despatch in real time.
           </p>
           <div className="hero-cta">
-            <Link href="/login" className="btn btn-primary btn-lg">Get Started</Link>
-            <Link href="/request?type=quote" className="btn btn-ghost btn-lg" style={{ color: "#ffffff", borderColor: "rgba(255,255,255,0.4)" }}>Request a Quote</Link>
+            <Link href="/login" className="btn btn-dark btn-lg">Get Started</Link>
+            <Link href="/request?type=quote" className="btn btn-ghost btn-lg" style={{ color: "var(--ink, #0f172a)", borderColor: "var(--line, #cbd5e1)" }}>
+              Request a Quote
+            </Link>
           </div>
         </div>
 
-        <div className="hero-stats-banner">
+        <div className="hero-stats-banner" style={{ background: "rgba(255, 255, 255, 0.9)", backdropFilter: "blur(8px)", borderTop: "1px solid var(--line)" }}>
           <div className="container hero-stats">
             <div>
-              <div className="stat-num">2020</div>
+              <div className="stat-num" style={{ color: "var(--ink)" }}>2020</div>
               <div className="stat-label">Founded in Australia</div>
             </div>
             <div>
-              <div className="stat-num">AU-Wide</div>
+              <div className="stat-num" style={{ color: "var(--ink)" }}>AU-Wide</div>
               <div className="stat-label">Site surveys &amp; install</div>
             </div>
             <div>
-              <div className="stat-num">HW + SW</div>
+              <div className="stat-num" style={{ color: "var(--ink)" }}>HW + SW</div>
               <div className="stat-label">One accountable partner</div>
             </div>
           </div>
@@ -68,8 +79,8 @@ export default function HomePage() {
               height: 480,
               borderRadius: 20,
               overflow: "hidden",
-              boxShadow: "0 20px 50px rgba(0,0,0,0.15)",
-              border: "1px solid var(--border-color, rgba(255,255,255,0.1))",
+              boxShadow: "0 20px 50px rgba(0,0,0,0.08)",
+              border: "1px solid var(--border-color, rgba(0,0,0,0.08))",
             }}
           >
             <Image
@@ -83,7 +94,7 @@ export default function HomePage() {
               style={{
                 position: "absolute",
                 inset: 0,
-                background: "linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%)",
+                background: "linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 60%, transparent 100%)",
                 display: "flex",
                 alignItems: "flex-end",
                 padding: "36px 40px",
@@ -98,19 +109,19 @@ export default function HomePage() {
                     letterSpacing: 1,
                     padding: "4px 12px",
                     borderRadius: 20,
-                    background: "rgba(12, 227, 251, 0.2)",
-                    color: "#0ce3fb",
-                    border: "1px solid rgba(12, 227, 251, 0.4)",
+                    background: "rgba(76, 58, 227, 0.12)",
+                    color: "var(--indigo, #4C3AE3)",
+                    border: "1px solid rgba(76, 58, 227, 0.25)",
                     display: "inline-block",
                     marginBottom: 10,
                   }}
                 >
                   Next-Gen Supply Chain Platform
                 </span>
-                <h3 style={{ fontSize: 28, color: "#ffffff", marginBottom: 6 }}>
+                <h3 style={{ fontSize: 28, color: "var(--ink, #0f172a)", marginBottom: 6 }}>
                   Integrated Mobile Computing, RFID &amp; Label Printing Systems
                 </h3>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: 15, margin: 0, maxWidth: 640 }}>
+                <p style={{ color: "var(--ink-soft, #475569)", fontSize: 15, margin: 0, maxWidth: 640 }}>
                   Deploy robust, floor-proven hardware engineered for Australian logistics, retail, and manufacturing operations.
                 </p>
               </div>
@@ -216,12 +227,12 @@ export default function HomePage() {
               sizes="(max-width: 880px) 100vw, 50vw"
               style={{ objectFit: "cover" }}
             />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 60%, rgba(15, 23, 42, 0.3) 100%)" }} />
-            <div style={{ position: "relative", zIndex: 2, color: "#ffffff" }}>
-              <span className="pill" style={{ background: "rgba(12, 227, 251, 0.2)", color: "#0ce3fb", border: "1px solid rgba(12, 227, 251, 0.4)" }}>
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.3) 100%)" }} />
+            <div style={{ position: "relative", zIndex: 2, color: "var(--ink)" }}>
+              <span className="pill" style={{ background: "rgba(76, 58, 227, 0.1)", color: "var(--indigo)", border: "1px solid rgba(76, 58, 227, 0.2)" }}>
                 DISCOVERY &rarr; DESIGN &rarr; DEPLOY &rarr; SUPPORT
               </span>
-              <p style={{ marginTop: 14, color: "#ffffff", fontSize: 14.5, fontWeight: 500 }}>
+              <p style={{ marginTop: 14, color: "var(--ink)", fontSize: 14.5, fontWeight: 500 }}>
                 A single engagement model, whether we&apos;re adding wireless coverage to one dock or re-platforming
                 an entire distribution centre.
               </p>

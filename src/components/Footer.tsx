@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>&copy; 2026 LogiQ-On Technology Group Pty Ltd. UI concept redesign &mdash; not affiliated content.</span>
+          <span>&copy; 2026 LogiQ-On Technology Group Pty Ltd. All rights reserved.</span>
           <Link href="#">Privacy Policy</Link>
         </div>
       </div>

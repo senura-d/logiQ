@@ -69,44 +69,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 2: VIDEO SHOWCASE */}
-      <section className="section" style={{ padding: "40px 0 0 0" }}>
-        <div className="container">
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              borderRadius: 20,
-              overflow: "hidden",
-              boxShadow: "0 20px 50px rgba(0,0,0,0.12)",
-              border: "1px solid var(--border-color, rgba(0,0,0,0.08))",
-              background: "#000000",
-            }}
+      {/* SECTION 2: FULL-SCREEN VIDEO SHOWCASE */}
+      <section className="video-fullscreen-section" style={{ width: "100%", padding: 0, margin: 0 }}>
+        <div className="video-fullscreen" style={{ width: "100%", height: "85vh", minHeight: 520, position: "relative", overflow: "hidden", background: "#000000" }}>
+          <video
+            className="video-fullscreen-media"
+            src="/video/home-showcase.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            aria-label="LogiQ-On Technology Fullscreen Operations Video"
           >
-            <video
-              src="/video/home-showcase.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              style={{
-                width: "100%",
-                height: "auto",
-                maxHeight: 640,
-                display: "block",
-                objectFit: "cover",
-              }}
-              aria-label="LogiQ-On Technology Operations Video"
-            >
-              Your browser does not support embedded HTML5 video.
-            </video>
-          </div>
+            Your browser does not support embedded video.
+          </video>
         </div>
       </section>
 
       {/* INDUSTRY STRIP */}
-      <section style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", marginTop: 50 }}>
+      <section style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", marginTop: 0 }}>
         <div className="container logo-strip">
           <span className="wordmark">Warehousing &amp; 3PL</span>
           <span className="wordmark">Retail &amp; ESL</span>

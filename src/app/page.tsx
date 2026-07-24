@@ -70,8 +70,8 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 2: FULL-SCREEN UNCROPPED VIDEO SHOWCASE */}
-      <section className="video-fullscreen-section" style={{ width: "100%", padding: 0, margin: 0, background: "#000000" }}>
-        <div className="video-fullscreen" style={{ width: "100%", height: "calc(100vh - 72px)", minHeight: 480, position: "relative", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "#000000" }}>
+      <section className="video-fullscreen-section" style={{ width: "100%", padding: 0, margin: 0, background: "#ffffff" }}>
+        <div className="video-fullscreen" style={{ width: "100%", height: "calc(100vh - 72px)", minHeight: 480, position: "relative", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "#ffffff" }}>
           <video
             className="video-fullscreen-media"
             src="/video/home-showcase.mp4"
@@ -80,7 +80,7 @@ export default function HomePage() {
             loop
             playsInline
             controls
-            style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", background: "#000000" }}
+            style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", background: "#ffffff" }}
             aria-label="LogiQ-On Technology Fullscreen Operations Video"
           >
             Your browser does not support embedded video.

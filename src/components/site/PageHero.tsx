@@ -30,7 +30,7 @@ export default function PageHero({
   secondary,
 }: PageHeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-end overflow-hidden bg-slate-950 pt-36 pb-12 md:pb-16">
+    <section className="relative min-h-screen flex items-end overflow-hidden bg-slate-950 pt-36 pb-12 md:pb-16">
       <div className="absolute inset-0 z-0">
         <Image
           src={image}

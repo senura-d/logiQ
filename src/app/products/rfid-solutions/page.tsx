@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function RfidSolutionsPage() {
   return (
-    <div className="pt-[110px]">
-      <section className="relative h-[420px] flex items-center overflow-hidden">
+    <div>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 pt-36 pb-16 w-full">
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"

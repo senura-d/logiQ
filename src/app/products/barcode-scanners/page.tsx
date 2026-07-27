@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function BarcodeScannersPage() {
   return (
     <div>
-      <section className="relative min-h-[480px] flex items-center overflow-hidden bg-slate-950 pt-32 pb-16 w-full">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 pt-36 pb-16 w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/pexels/products-barcode-scan.jpg"

@@ -43,14 +43,14 @@ const CATEGORIES = [
 
 export default function DigitalSignagePage() {
   return (
-    <div className="pt-[110px]">
-      <section className="relative h-[420px] flex items-center overflow-hidden">
+    <div>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 pt-36 pb-16 w-full">
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"
             style={{ backgroundImage: "url('/images/products/digital-signage/smart-signage-series.jpg')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-on-background/85 via-on-background/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/65 to-slate-950/30" />
         </div>
         <div className="container mx-auto px-margin-desktop relative z-10">
           <div className="max-w-2xl">

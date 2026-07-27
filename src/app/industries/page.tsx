@@ -98,8 +98,6 @@ export default function IndustriesPage() {
         lede="LogiQ-On delivers enterprise-grade infrastructure and bespoke automation for the most complex industrial environments — from autonomous warehousing to real-time retail visibility."
         image="/images/pexels/industries-cold-chain-dock.jpg"
         imageAlt="Cold chain loading dock with temperature-controlled freight"
-        primary={{ label: "Request a Demo", href: "/request-demo" }}
-        secondary={{ label: "View Solutions", href: "/solutions" }}
       />
 
       <GsapSection id="sectors-header" className="bg-surface" fullScreen>

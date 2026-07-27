@@ -124,8 +124,6 @@ export default function PartnersPage() {
         lede="We collaborate with the world's most trusted technology providers to deliver industrial-grade reliability — bridging complex hardware and intelligent software orchestration."
         image="/images/pexels/partners-server-hardware.jpg"
         imageAlt="Enterprise network server hardware in a data centre rack"
-        primary={{ label: "Become a Partner", href: "/contact" }}
-        secondary={{ label: "Explore Solutions", href: "/solutions" }}
       />
 
       <GsapSection id="alliances-header" className="bg-surface" fullScreen>

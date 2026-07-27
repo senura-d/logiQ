@@ -102,8 +102,6 @@ export default function RetailStoresPage() {
         lede="Transforming brick-and-mortar locations into data-driven, hyper-efficient fulfilment hubs with industrial-grade reliability and seamless customer journeys."
         image="/images/pexels/retail-store-aisle.jpg"
         imageAlt="Modern retail store aisle with electronic shelf labelling"
-        primary={{ label: "Request Demo", href: "/request-demo" }}
-        secondary={{ label: "Explore Solutions", href: "/solutions" }}
       />
 
       <GsapSection id="retail-stats" className="bg-white py-14 border-y border-slate-200" fullScreen={false}>

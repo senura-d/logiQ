@@ -78,8 +78,6 @@ export default function BuzzPage() {
         lede="Stay updated with the pulse of Australian logistics — from deep-dive whitepapers to high-velocity company milestones."
         image="/images/pexels/buzz-blog-workspace.jpg"
         imageAlt="Logistics team reviewing supply chain data in a workspace"
-        primary={{ label: "Subscribe via Contact", href: "/contact" }}
-        secondary={{ label: "Explore Solutions", href: "/solutions" }}
       />
 
       <GsapSection id="buzz-header" className="bg-surface" fullScreen>

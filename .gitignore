@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scraped reference material (42MB, not used by the site)
+/public/scraped/
+
+# one-off asset download helper (contains expiring signed URLs)
+/download_stitch_screens.ps1

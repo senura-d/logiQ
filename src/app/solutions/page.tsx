@@ -133,8 +133,6 @@ export default function SolutionsPage() {
         lede="LogiQ-On Tech sources and supplies high-performance hardware, intelligent software, and wireless infrastructure to unlock peak operational efficiency."
         image="/images/pexels/solutions-robotic-arm.jpg"
         imageAlt="Industrial robotic arm on a warehouse automation line"
-        primary={{ label: "Request a Demo", href: "/request-demo" }}
-        secondary={{ label: "Talk to an Engineer", href: "/contact" }}
       />
 
       <GsapSection id="pillars-header" className="bg-surface" fullScreen>

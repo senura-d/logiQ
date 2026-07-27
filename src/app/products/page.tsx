@@ -106,8 +106,6 @@ export default function ProductsPage() {
         lede="End-to-end operational clarity powered by ruggedized hardware and cloud-native software ecosystems. Built for global scale."
         image="/images/pexels/products-barcode-scan.jpg"
         imageAlt="Warehouse operator scanning a shipping label with a rugged barcode scanner"
-        primary={{ label: "Request Demo", href: "/request-demo" }}
-        secondary={{ label: "Explore Solutions", href: "/solutions" }}
       />
 
       <GsapSection id="products-header" className="bg-surface" fullScreen>

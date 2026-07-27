@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "gStore Retail RFID Solutions | GreyOrange",
@@ -107,7 +108,7 @@ export default function GstoreGreyOrangePage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
             <Image
-              src="/images/gstore/greyorange-logo-white.png"
+              src={getAssetPath("/images/gstore/greyorange-logo-white.png")}
               alt="GreyOrange"
               width={180}
               height={40}
@@ -127,7 +128,7 @@ export default function GstoreGreyOrangePage() {
           </div>
           <div className="relative flex justify-center">
             <Image
-              src="/images/gstore/phone-zoom.png"
+              src={getAssetPath("/images/gstore/phone-zoom.png")}
               alt="gStore mobile app showing real-time inventory"
               width={420}
               height={560}
@@ -162,7 +163,7 @@ export default function GstoreGreyOrangePage() {
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-outline-variant bg-white p-8 flex items-center justify-center">
             <Image
-              src="/images/gstore/collection.png"
+              src={getAssetPath("/images/gstore/collection.png")}
               alt="gStore inventory collection view"
               width={480}
               height={480}
@@ -190,7 +191,7 @@ export default function GstoreGreyOrangePage() {
               >
                 <div className="relative rounded-2xl overflow-hidden border border-outline-variant bg-on-background aspect-[9/16] max-w-[260px] mx-auto">
                   <video
-                    src={row.video}
+                    src={getAssetPath(row.video)}
                     autoPlay
                     muted
                     loop
@@ -212,7 +213,7 @@ export default function GstoreGreyOrangePage() {
       {/* Insights row */}
       <section className="relative py-24 px-margin-desktop overflow-hidden bg-on-background">
         <video
-          src="/images/gstore/videos/insights-bg.mp4"
+          src={getAssetPath("/images/gstore/videos/insights-bg.mp4")}
           autoPlay
           muted
           loop
@@ -238,7 +239,7 @@ export default function GstoreGreyOrangePage() {
       {/* Manager view row */}
       <section className="relative py-24 px-margin-desktop overflow-hidden bg-on-background">
         <video
-          src="/images/gstore/videos/manager-view-bg.mp4"
+          src={getAssetPath("/images/gstore/videos/manager-view-bg.mp4")}
           autoPlay
           muted
           loop
@@ -275,7 +276,7 @@ export default function GstoreGreyOrangePage() {
             {ENTERPRISE_FEATURES.map((f) => (
               <div key={f.title} className="bg-white border border-outline-variant rounded-2xl overflow-hidden">
                 <div className="relative h-48">
-                  <Image src={f.image} alt={f.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                  <Image src={getAssetPath(f.image)} alt={f.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-headline-sm font-headline-sm text-on-background mb-2">{f.title}</h3>
@@ -322,7 +323,7 @@ export default function GstoreGreyOrangePage() {
       <section className="py-24 px-margin-desktop bg-surface-container-low border-y border-outline-variant/30">
         <div className="max-w-3xl mx-auto text-center">
           <Image
-            src="/images/gstore/fabletics-logo.png"
+            src={getAssetPath("/images/gstore/fabletics-logo.png")}
             alt="Fabletics"
             width={160}
             height={48}

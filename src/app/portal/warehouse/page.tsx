@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Warehouse Management Portal",
@@ -133,7 +134,7 @@ export default function WarehousePortalPage() {
 </div>
 </div>
 <div className="relative flex-1 bg-surface-dim min-h-[400px]">
-<img className="w-full h-full object-cover grayscale brightness-90" data-alt="A high-contrast industrial satellite map interface showing global supply chain shipment nodes. The map features a dark slate background with glowing blue paths connecting major logistics hubs across North America and Europe. Tiny pulsing data points move along these paths representing real-time freight movement. The overall aesthetic is professional, data-driven, and minimalist, utilizing the brand's primary blue and cool gray tones." src="/images/stitch/49e1f6fe69ba.png"/>
+<img className="w-full h-full object-cover grayscale brightness-90" data-alt="A high-contrast industrial satellite map interface showing global supply chain shipment nodes. The map features a dark slate background with glowing blue paths connecting major logistics hubs across North America and Europe. Tiny pulsing data points move along these paths representing real-time freight movement. The overall aesthetic is professional, data-driven, and minimalist, utilizing the brand's primary blue and cool gray tones." src={getAssetPath("/images/stitch/49e1f6fe69ba.png")}/>
 <div className="absolute top-4 left-4 flex flex-col gap-2">
 <div className="bg-on-background/80 backdrop-blur-md p-3 rounded-lg border border-outline-variant/30 text-white">
 <p className="text-label-sm font-label-sm opacity-70">Active In-Transit</p>

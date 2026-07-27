@@ -6,6 +6,7 @@ import HeroVideo from "@/components/HeroVideo";
 import GsapSection from "@/components/GsapSection";
 import { TextAnimate } from "@/components/ui/text-animate";
 import ContactEmailForm from "@/components/ContactEmailForm";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   description:
@@ -92,7 +93,7 @@ export default function HomePage() {
 <div className="gsap-animate group relative flex flex-col justify-between rounded-3xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
   <div>
     <div className="relative h-48 overflow-hidden">
-      <img alt="Wireless Infrastructure" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/stitch/e4da613a9de1.png"/>
+      <img alt="Wireless Infrastructure" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={getAssetPath("/images/stitch/e4da613a9de1.png")}/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"/>
       <span className="absolute top-4 left-4 text-[11px] font-bold text-white/90 tracking-widest bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">01</span>
       <div className="absolute bottom-3 left-4 w-8 h-8 bg-white rounded-lg flex items-center justify-center text-slate-950 shadow-md border border-white">
@@ -118,7 +119,7 @@ export default function HomePage() {
 <div className="gsap-animate group relative flex flex-col justify-between rounded-3xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
   <div>
     <div className="relative h-48 overflow-hidden">
-      <img alt="RFID Tracking" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/stitch/87e3e6a9b1e0.png"/>
+      <img alt="RFID Tracking" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={getAssetPath("/images/stitch/87e3e6a9b1e0.png")}/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"/>
       <span className="absolute top-4 left-4 text-[11px] font-bold text-white/90 tracking-widest bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">02</span>
       <div className="absolute bottom-3 left-4 w-8 h-8 bg-white rounded-lg flex items-center justify-center text-slate-950 shadow-md border border-white">
@@ -144,7 +145,7 @@ export default function HomePage() {
 <div className="gsap-animate group relative flex flex-col justify-between rounded-3xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
   <div>
     <div className="relative h-48 overflow-hidden">
-      <img alt="Supply Chain Hardware" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/stitch/ea517d840311.png"/>
+      <img alt="Supply Chain Hardware" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={getAssetPath("/images/stitch/ea517d840311.png")}/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"/>
       <span className="absolute top-4 left-4 text-[11px] font-bold text-white/90 tracking-widest bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">03</span>
       <div className="absolute bottom-3 left-4 w-8 h-8 bg-white rounded-lg flex items-center justify-center text-slate-950 shadow-md border border-white">
@@ -170,7 +171,7 @@ export default function HomePage() {
 <div className="gsap-animate group relative flex flex-col justify-between rounded-3xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
   <div>
     <div className="relative h-48 overflow-hidden">
-      <img alt="Integration &amp; Enterprise Services" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="/images/pexels/partners-server-hardware.jpg"/>
+      <img alt="Integration &amp; Enterprise Services" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={getAssetPath("/images/pexels/partners-server-hardware.jpg")}/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"/>
       <span className="absolute top-4 left-4 text-[11px] font-bold text-white/90 tracking-widest bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">04</span>
       <div className="absolute bottom-3 left-4 w-8 h-8 bg-white rounded-lg flex items-center justify-center text-slate-950 shadow-md border border-white">
@@ -352,7 +353,7 @@ export default function HomePage() {
 {PARTNER_LOGOS.slice(0, 15).map((partner) => (
 <div key={partner.file} className="gsap-animate bg-white border border-outline-variant rounded-xl h-24 flex items-center justify-center p-4 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 hover:border-primary/40 transition-all">
 <Image
-  src={`/images/partners/${partner.file}`}
+  src={getAssetPath(`/images/partners/${partner.file}`)}
   alt={partner.name}
   width={120}
   height={48}
@@ -374,7 +375,7 @@ export default function HomePage() {
 <div className="grid md:grid-cols-2 gap-12 items-center">
 <div className="gsap-animate">
 <Image
-  src="/images/gstore/greyorange-logo-white.png"
+  src={getAssetPath("/images/gstore/greyorange-logo-white.png")}
   alt="GreyOrange"
   width={160}
   height={36}
@@ -412,7 +413,7 @@ export default function HomePage() {
 </div>
 <div className="gsap-animate relative flex justify-center">
 <Image
-  src="/images/gstore/phone-zoom.png"
+  src={getAssetPath("/images/gstore/phone-zoom.png")}
   alt="gStore mobile app showing real-time inventory"
   width={380}
   height={500}

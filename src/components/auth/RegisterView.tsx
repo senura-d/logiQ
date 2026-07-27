@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 type AccountType = "customer" | "vendor" | "partner";
 
@@ -182,7 +183,7 @@ export default function RegisterView() {
             <div style={{ marginBottom: 28 }}>
               <Link href="/">
                 <Image
-                  src="/images/logo.png"
+                  src={getAssetPath("/images/logo.png")}
                   alt="LogiQ-On Logo"
                   width={150}
                   height={42}

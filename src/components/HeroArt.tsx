@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/nav";
 
 export type HeroArtVariant =
   | "about"
@@ -44,7 +45,7 @@ export default function HeroArt({ variant, className }: { variant: HeroArtVarian
   const photo = PHOTOS[variant];
   return (
     <div className={`hero-art${className ? ` ${className}` : ""}`}>
-      <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 880px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+      <Image src={getAssetPath(photo.src)} alt={photo.alt} fill sizes="(max-width: 880px) 100vw, 50vw" style={{ objectFit: "cover" }} />
     </div>
   );
 }

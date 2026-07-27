@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 type HeroAction = {
   label: string;
@@ -33,7 +34,7 @@ export default function PageHero({
     <section className="relative min-h-screen flex items-end overflow-hidden bg-slate-950 pt-36 pb-12 md:pb-16">
       <div className="absolute inset-0 z-0">
         <Image
-          src={image}
+          src={getAssetPath(image)}
           alt={imageAlt}
           fill
           priority

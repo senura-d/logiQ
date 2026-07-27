@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Digital Display Solutions",
@@ -48,7 +49,7 @@ export default function DigitalSignagePage() {
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/products/digital-signage/smart-signage-series.jpg')" }}
+            style={{ backgroundImage: `url('${getAssetPath("/images/products/digital-signage/smart-signage-series.jpg")}')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/65 to-slate-950/30" />
         </div>
@@ -77,7 +78,7 @@ export default function DigitalSignagePage() {
             {CATEGORIES.map((c) => (
               <div key={c.title} className="bg-white border border-outline-variant rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
                 <div className="relative h-44">
-                  <Image src={c.image} alt={c.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                  <Image src={getAssetPath(c.image)} alt={c.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-headline-sm font-headline-sm text-on-background mb-2">{c.title}</h3>

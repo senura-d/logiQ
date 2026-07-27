@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Wireless Solutions",
@@ -33,7 +34,7 @@ export default function WirelessSolutionsPage() {
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/products/wireless/wireless-hardware.jpg')" }}
+            style={{ backgroundImage: `url('${getAssetPath("/images/products/wireless/wireless-hardware.jpg")}')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/65 to-slate-950/30" />
         </div>
@@ -62,7 +63,7 @@ export default function WirelessSolutionsPage() {
             {FEATURES.map((f) => (
               <div key={f.title} className="bg-white border border-outline-variant rounded-2xl overflow-hidden">
                 <div className="relative h-48">
-                  <Image src={f.image} alt={f.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                  <Image src={getAssetPath(f.image)} alt={f.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-headline-sm font-headline-sm text-on-background mb-2">{f.title}</h3>

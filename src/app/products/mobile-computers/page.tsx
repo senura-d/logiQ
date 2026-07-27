@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProductGrid from "@/components/products/ProductGrid";
 import { MOBILE_COMPUTERS } from "@/lib/data/mobile-computers";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Rugged Mobile Computers",
@@ -16,7 +17,7 @@ export default function MobileComputersPage() {
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/stitch/8e6fd312e52b.png')" }}
+            style={{ backgroundImage: `url('${getAssetPath("/images/stitch/8e6fd312e52b.png")}')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/65 to-slate-950/30" />
         </div>

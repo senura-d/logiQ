@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductGrid from "@/components/products/ProductGrid";
 import { BARCODE_SCANNERS } from "@/lib/data/barcode-scanners";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Barcode Scanners",
@@ -16,7 +17,7 @@ export default function BarcodeScannersPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 pt-36 pb-16 w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pexels/products-barcode-scan.jpg"
+            src={getAssetPath("/images/pexels/products-barcode-scan.jpg")}
             alt="Barcode Scanners"
             fill
             priority

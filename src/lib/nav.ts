@@ -23,10 +23,23 @@ export const UTILITY_LINKS: NavLink[] = [
   { key: "vendor-login", label: "Vendor Login", href: "/vendor-login" },
 ];
 
+/**
+ * Prefixes a public/ asset with the deployment basePath.
+ *
+ * Required for every asset reference, including `next/image`: with
+ * `images.unoptimized` set (needed for `output: "export"`), Next does not
+ * rewrite the src, so a bare "/images/x.png" 404s on the /logiQ subpath.
+ *
+ * Idempotent — re-prefixing an already-prefixed path is a no-op, so this stays
+ * safe if a future Next version starts applying basePath itself.
+ */
 export function getAssetPath(path: string): string {
   if (!path) return "";
   if (path.startsWith("http://") || path.startsWith("https://")) return path;
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  if (basePath && (cleanPath === basePath || cleanPath.startsWith(`${basePath}/`))) {
+    return cleanPath;
+  }
   return `${basePath}${cleanPath}`;
 }

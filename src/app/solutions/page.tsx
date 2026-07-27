@@ -284,7 +284,7 @@ export default function SolutionsPage() {
                 className="marquee-item bg-white border border-slate-200 rounded-xl h-24 flex items-center justify-center p-4 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 hover:border-indigo-300 transition-all"
               >
                 <Image
-                  src={`/images/partners/${partner.file}`}
+                  src={getAssetPath(`/images/partners/${partner.file}`)}
                   alt={i < MARQUEE_LOGOS.length ? partner.name : ""}
                   width={120}
                   height={48}

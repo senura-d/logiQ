@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { getAssetPath } from "@/lib/nav";
+
+const POSTER = getAssetPath("/images/pexels/home-warehouse-aisle.jpg");
 
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -40,15 +43,16 @@ export default function HeroVideo() {
       loop
       muted
       playsInline
-      poster="/images/home-hero-warehouse.png"
+      poster={POSTER}
       className="w-full h-full object-cover object-center pointer-events-none"
     >
-      <source src="/videos/hero-bg-v2.webm" type="video/webm" />
-      <source src="/videos/hero-bg-v2.mp4" type="video/mp4" />
+      <source src={getAssetPath("/videos/hero-bg-v2.webm")} type="video/webm" />
+      <source src={getAssetPath("/videos/hero-bg-v2.mp4")} type="video/mp4" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className="w-full h-full object-cover object-center"
         alt="Futuristic automated warehouse with robots, AMRs, and smart conveyor belts"
-        src="/images/home-hero-warehouse.png"
+        src={POSTER}
       />
     </video>
   );

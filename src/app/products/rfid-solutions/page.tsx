@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProductGrid from "@/components/products/ProductGrid";
 import { RFID_PRODUCTS } from "@/lib/data/rfid-products";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "RFID Solutions",
@@ -16,7 +17,7 @@ export default function RfidSolutionsPage() {
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/products/rfid/zebra-atr7000.jpg')" }}
+            style={{ backgroundImage: `url('${getAssetPath("/images/products/rfid/zebra-atr7000.jpg")}')` }}
           />
           <div className="absolute inset-0 bg-on-background/90" />
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/forms/ContactForm";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -13,7 +14,7 @@ export default function ContactPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 pt-36 pb-20 w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pexels/contact-support-team.jpg"
+            src={getAssetPath("/images/pexels/contact-support-team.jpg")}
             alt="Contact LogiQ-On Team"
             fill
             priority

@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { DESKTOP_PRINTERS, DesktopPrinter, TechnologyType } from "@/lib/data/desktop-printers";
+import { getAssetPath } from "@/lib/nav";
 
 const ARROW = (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" width="16" height="16">
@@ -275,7 +276,7 @@ export default function DesktopPrintersClient() {
                     }}
                   >
                     <Image
-                      src={printer.image}
+                      src={getAssetPath(printer.image)}
                       alt={printer.model}
                       width={220}
                       height={180}
@@ -487,7 +488,7 @@ export default function DesktopPrintersClient() {
               }}
             >
               <Image
-                src={activeModalPrinter.image}
+                src={getAssetPath(activeModalPrinter.image)}
                 alt={activeModalPrinter.model}
                 width={260}
                 height={200}

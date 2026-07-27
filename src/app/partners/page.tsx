@@ -6,6 +6,7 @@ import GsapSection from "@/components/GsapSection";
 import PageHero from "@/components/site/PageHero";
 import SectionIntro from "@/components/site/SectionIntro";
 import { TextAnimate } from "@/components/ui/text-animate";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Partners",
@@ -207,7 +208,7 @@ export default function PartnersPage() {
                 <div className="flex items-start justify-between mb-7">
                   <div className="w-20 h-14 bg-white rounded-xl border border-slate-200 flex items-center justify-center p-2">
                     <Image
-                      src={`/images/partners/${partner.logo}`}
+                      src={getAssetPath(`/images/partners/${partner.logo}`)}
                       alt={partner.name}
                       width={110}
                       height={40}
@@ -252,7 +253,7 @@ export default function PartnersPage() {
                 className="gsap-animate bg-white border border-outline-variant rounded-xl h-24 flex items-center justify-center p-4 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 hover:border-primary/40 transition-all"
               >
                 <Image
-                  src={`/images/partners/${partner.file}`}
+                  src={getAssetPath(`/images/partners/${partner.file}`)}
                   alt={partner.name}
                   width={120}
                   height={48}

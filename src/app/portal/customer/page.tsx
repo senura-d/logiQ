@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Customer Portal",
@@ -106,7 +107,7 @@ export default function CustomerPortalPage() {
 
 <section className="relative h-48 rounded-xl overflow-hidden bg-on-background mb-8 shadow-xl">
 <div className="absolute inset-0 opacity-40 mix-blend-luminosity">
-<img className="w-full h-full object-cover" src="/images/stitch/78f52f5ba1ca.png"/>
+<img className="w-full h-full object-cover" src={getAssetPath("/images/stitch/78f52f5ba1ca.png")}/>
 </div>
 <div className="absolute inset-0 bg-gradient-to-r from-on-background via-on-background/60 to-transparent flex items-center px-12">
 <div>

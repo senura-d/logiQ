@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/nav";
 
 type Product = {
   id: string;
@@ -49,7 +50,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
           <div key={product.id} className="bg-white border border-outline-variant rounded-2xl overflow-hidden group hover:border-primary/40 hover:shadow-lg transition-all">
             <div className="relative h-52 bg-surface-container-low">
               <Image
-                src={product.image}
+                src={getAssetPath(product.image)}
                 alt={`${product.brand} ${product.model}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

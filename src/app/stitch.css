@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-outline-variant: #c5c5d7;
+  --color-on-secondary-fixed: #1b1b1c;
+  --color-status-info: #5770FF;
+  --color-data-viz-cyan: #8BD3FF;
+  --color-surface-variant: #e1e2e4;
+  --color-primary-fixed-dim: #bbc3ff;
+  --color-on-primary-fixed: #000f5c;
+  --color-on-tertiary-fixed: #001e2d;
+  --color-tertiary-container: #2c7ca4;
+  --color-tertiary-fixed: #c5e7ff;
+  --color-background: #f8f9fb;
+  --color-on-tertiary: #ffffff;
+  --color-status-success: #10B981;
+  --color-on-primary-fixed-variant: #0a30c6;
+  --color-secondary-container: #e4e2e3;
+  --color-surface-tint: #324ddd;
+  --color-surface-container-low: #f3f4f6;
+  --color-status-error: #EF4444;
+  --color-inverse-on-surface: #f0f1f3;
+  --color-on-error-container: #93000a;
+  --color-secondary-fixed: #e4e2e3;
+  --color-status-warning: #F59E0B;
+  --color-tertiary: #006388;
+  --color-on-tertiary-fixed-variant: #004c6a;
+  --color-on-background: #191c1e;
+  --color-secondary-fixed-dim: #c8c6c7;
+  --color-primary-container: #4c66f5;
+  --color-secondary: #5f5e5f;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-primary: #bbc3ff;
+  --color-on-surface-variant: #444655;
+  --color-on-secondary: #ffffff;
+  --color-surface: #f8f9fb;
+  --color-surface-container-high: #e7e8ea;
+  --color-tertiary-fixed-dim: #87cffb;
+  --color-on-secondary-fixed-variant: #474647;
+  --color-surface-container: #edeef0;
+  --color-surface-dim: #d9dadc;
+  --color-brand-accent-purple: #8110FF;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-inverse-surface: #2e3132;
+  --color-on-secondary-container: #656465;
+  --color-outline: #757686;
+  --color-on-primary-container: #fffbff;
+  --color-error-container: #ffdad6;
+  --color-on-tertiary-container: #fcfcff;
+  --color-primary: #2f4adb;
+  --color-surface-bright: #f8f9fb;
+  --color-surface-container-highest: #e1e2e4;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #dee0ff;
+  --color-on-surface: #191c1e;
+
+  /* Spacing */
+  --spacing-sidebar-width: 260px;
+  --spacing-margin-mobile: 16px;
+  --spacing-top-nav-height: 64px;
+  --spacing-margin-desktop: 32px;
+  --spacing-gutter: 16px;
+
+  /* Radius */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* Fonts */
+  --font-label-md: "JetBrains Mono", monospace;
+  --font-headline-lg-mobile: "Hanken Grotesk", sans-serif;
+  --font-headline-sm: "Hanken Grotesk", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-headline-lg: "Hanken Grotesk", sans-serif;
+  --font-headline-md: "Hanken Grotesk", sans-serif;
+  --font-display-lg: "Hanken Grotesk", sans-serif;
+  --font-label-sm: "JetBrains Mono", monospace;
+  --font-body-md: "Inter", sans-serif;
+
+  /* Font sizes */
+  --text-label-md: 13px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.05em;
+  --text-label-md--font-weight: 500;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 600;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 500;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.bento-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bento-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.pillar-image-overlay {
+  background: linear-gradient(0deg, rgba(25, 28, 30, 0.9) 0%, rgba(25, 28, 30, 0.4) 100%);
+}
+@keyframes stitch-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: stitch-scroll 50s linear infinite;
+}
+
+/* Portal dashboards */
+.active-nav-link { transition: transform 0.2s ease-out; }
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+.chart-grid {
+  background-image: radial-gradient(circle, #e1e2e4 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.sidebar-active { background-color: #2f4adb; color: #ffffff; border-radius: 0.5rem; }
+.zebra-table tr:nth-child(even) { background-color: #f9fafb; }
+.zebra-stripe:nth-child(even) { background-color: #F9FAFB; }
+.heatmap-cell { transition: transform 0.2s; }
+.heatmap-cell:hover { transform: scale(1.1); z-index: 10; }
+.chart-container { position: relative; height: 240px; width: 100%; }
+.gauge-ring { transition: stroke-dashoffset 0.5s ease; }
+.sidebar-active-pill { transform: translateX(4px); }
+.glass-card { background: rgba(255, 255, 255, 0.85); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
+.data-table-row:nth-child(even) { background-color: #f9fafb; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.funnel-stage { clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%); }
+.dashboard-card { background-color: #ffffff; border: 1px solid #e1e2e4; transition: all 0.2s ease; }
+.dashboard-card:hover { background-color: #FAFAFA; border-color: #757686; }
+.status-pill { padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: 600; }

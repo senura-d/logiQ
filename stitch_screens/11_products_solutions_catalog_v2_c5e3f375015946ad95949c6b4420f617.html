@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Hanken+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(117, 118, 134, 0.1);
+        }
+        .zebra-table tr:nth-child(even) {
+            background-color: #F9FAFB;
+        }
+        .sidebar-active {
+            border-left: 3px solid #2f4adb;
+            background-color: rgba(47, 74, 219, 0.05);
+            color: #2f4adb;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#006388",
+                    "outline": "#757686",
+                    "surface-variant": "#e1e2e4",
+                    "secondary-container": "#e4e2e3",
+                    "status-info": "#5770FF",
+                    "on-secondary-fixed-variant": "#474647",
+                    "status-success": "#10B981",
+                    "tertiary-fixed-dim": "#87cffb",
+                    "surface-tint": "#324ddd",
+                    "secondary-fixed": "#e4e2e3",
+                    "surface-container": "#edeef0",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#bbc3ff",
+                    "data-viz-cyan": "#8BD3FF",
+                    "on-tertiary-fixed-variant": "#004c6a",
+                    "surface-container-highest": "#e1e2e4",
+                    "status-warning": "#F59E0B",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-primary-fixed-variant": "#0a30c6",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#fcfcff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f4f6",
+                    "outline-variant": "#c5c5d7",
+                    "primary": "#2f4adb",
+                    "inverse-surface": "#2e3132",
+                    "primary-container": "#4c66f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9fb",
+                    "status-error": "#EF4444",
+                    "secondary": "#5f5e5f",
+                    "brand-accent-purple": "#8110FF",
+                    "secondary-fixed-dim": "#c8c6c7",
+                    "on-surface-variant": "#444655",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-container": "#656465",
+                    "on-tertiary-fixed": "#001e2d",
+                    "tertiary-fixed": "#c5e7ff",
+                    "on-surface": "#191c1e",
+                    "tertiary-container": "#2c7ca4",
+                    "surface-container-high": "#e7e8ea",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9fb",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed": "#000f5c",
+                    "surface-dim": "#d9dadc",
+                    "surface": "#f8f9fb",
+                    "on-secondary-fixed": "#1b1b1c",
+                    "primary-fixed-dim": "#bbc3ff",
+                    "primary-fixed": "#dee0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "sidebar-width": "260px",
+                    "gutter": "16px",
+                    "top-nav-height": "64px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-top-nav-height px-margin-desktop max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">LogiQ-On Tech</span>
+<nav class="hidden lg:flex gap-6 items-center">
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 cursor-pointer active:opacity-70 transition-opacity" href="#">Products</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors cursor-pointer" href="#">Solutions</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors cursor-pointer" href="#">Industries</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors cursor-pointer" href="#">Partners</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors cursor-pointer" href="#">Retail</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors cursor-pointer" href="#">Buzz</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-surface-container-low px-3 py-1.5 rounded border border-outline-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm font-body-sm w-48" placeholder="Search catalog..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">language</span>
+<button class="bg-primary text-on-primary px-6 py-2 font-body-md font-semibold rounded-lg hover:bg-primary-container transition-all active:scale-95">Contact Us</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto flex min-h-screen">
+<!-- Persistent Portal Sidebar -->
+<aside class="hidden md:block w-sidebar-width bg-white border-r border-outline-variant pt-8 flex-shrink-0">
+<div class="px-6 mb-8">
+<h3 class="font-label-sm text-label-sm text-outline uppercase tracking-widest mb-4">Categories</h3>
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body-sm text-body-sm sidebar-active" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                            Supply Chain Hardware
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body-sm text-body-sm text-secondary hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">sensors</span>
+                            RFID & Asset Tracking
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body-sm text-body-sm text-secondary hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">router</span>
+                            Wireless Infrastructure
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body-sm text-body-sm text-secondary hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">security</span>
+                            Network Security
+                        </a>
+</li>
+</ul>
+</div>
+<div class="px-6 border-t border-outline-variant pt-8">
+<h3 class="font-label-sm text-label-sm text-outline uppercase tracking-widest mb-4">Strategic Partners</h3>
+<div class="space-y-4">
+<div class="p-3 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">Cambium</span>
+<span class="text-[10px] font-label-md text-outline">NETWORKS</span>
+</div>
+<div class="p-3 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">Ruckus</span>
+<span class="text-[10px] font-label-md text-outline">COMMSCOPE</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<section class="flex-grow p-8 bg-surface-bright">
+<!-- Hero / Featured Section -->
+<div class="mb-12 relative overflow-hidden rounded-xl h-[400px] flex items-center">
+<img alt="Industrial Hardware Close-up" class="absolute inset-0 w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida/AP1WRLtniMfIG3VsbhVI1EKgM6y8rheZeNADLqnzXi29Bky6-pCkjJAXHNDC7ng0RifaC4o5QcFxT3_m_4eEFEHugIlV-eJeP1ugotluvl7lviT_yYrHK7CSvYKsh5kCPrzl-9ykaePPUm1xq93xY4192eD4b3iDJYbtoYD5VubpmFxAOLalSUL-Swx6wVm1Ij9uEpNN1HBGOHAWx0hNjehkuJ5JaP8NnD1ou83oBk83oOY2cPVhsHl9Oqu27Kg"/>
+<div class="relative z-10 px-12 max-w-2xl">
+<span class="inline-block bg-primary text-on-primary px-3 py-1 text-label-sm font-label-sm rounded mb-4">NEW RELEASE: L-SERIES 2024</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6">Industrial Grade Precision.</h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8 leading-relaxed">Introducing the LogiQ-On rugged mobile suite. Optimized for sub-zero warehouse environments and high-intensity distribution hubs.</p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-3 font-semibold rounded hover:bg-primary transition-colors flex items-center gap-2">
+                            Download Specs <span class="material-symbols-outlined">download</span>
+</button>
+<button class="border border-white text-white px-8 py-3 font-semibold rounded hover:bg-white/10 transition-colors">Request Quote</button>
+</div>
+</div>
+</div>
+<!-- Bento Grid - Product Categories -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
+<!-- Wireless Infrastructure Card -->
+<div class="md:col-span-2 bg-white border border-outline-variant p-8 rounded-lg flex flex-col justify-between group hover:shadow-lg transition-shadow">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-tertiary text-4xl">settings_input_antenna</span>
+<span class="text-status-success font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-success"></span> MISSION CRITICAL
+                            </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Wireless Infrastructure</h2>
+<p class="font-body-md text-body-md text-secondary mb-6 max-w-lg">Scalable outdoor and high-density indoor Wi-Fi 6E/7 solutions powered by Cambium and Ruckus. Zero-handoff mobility for automated guided vehicles (AGVs).</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant pt-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">signal_cellular_connected_no_internet_4_bar</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">LATENCY</div>
+<div class="font-headline-sm text-headline-sm">< 5ms</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">CAPACITY</div>
+<div class="font-headline-sm text-headline-sm">2k+ Nodes</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RFID Card -->
+<div class="bg-tertiary text-white p-8 rounded-lg flex flex-col justify-between hover:bg-tertiary-container transition-colors group">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6">nfc</span>
+<h2 class="font-headline-lg text-headline-lg mb-2">RFID & Asset Tracking</h2>
+<p class="font-body-sm text-body-sm opacity-80 mb-6">High-speed bulk tag reading for inventory reconciliation with 99.9% accuracy.</p>
+</div>
+<ul class="space-y-3 font-body-sm mb-6">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success">check_circle</span> Long-range Fixed Readers</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success">check_circle</span> Passive & Active Tags</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-status-success">check_circle</span> Warehouse Gate Portals</li>
+</ul>
+<a class="font-label-md text-label-md flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">VIEW SOLUTIONS <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<!-- Hardware Catalog Table (High Density) -->
+<div class="bg-white border border-outline-variant rounded-lg overflow-hidden mb-12">
+<div class="px-8 py-6 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<h3 class="font-headline-sm text-headline-sm">Rugged Hardware Portfolio</h3>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 bg-white border border-outline-variant rounded font-label-md text-label-md flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">filter_alt</span> FILTER</button>
+<button class="px-4 py-1.5 bg-white border border-outline-variant rounded font-label-md text-label-md flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">export_notes</span> CSV</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left zebra-table">
+<thead>
+<tr class="bg-on-surface text-white">
+<th class="px-8 py-4 font-label-md text-label-md uppercase tracking-wider">Model ID</th>
+<th class="px-8 py-4 font-label-md text-label-md uppercase tracking-wider">Category</th>
+<th class="px-8 py-4 font-label-md text-label-md uppercase tracking-wider">Durability Rating</th>
+<th class="px-8 py-4 font-label-md text-label-md uppercase tracking-wider">OS Support</th>
+<th class="px-8 py-4 font-label-md text-label-md uppercase tracking-wider">Lead Time</th>
+<th class="px-8 py-4 font-label-md text-label-md uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr>
+<td class="px-8 py-4 font-label-md text-primary font-bold">LX-9500 Rugged</td>
+<td class="px-8 py-4 font-body-sm">Handheld Computer</td>
+<td class="px-8 py-4"><span class="bg-status-info/10 text-status-info px-2 py-0.5 rounded text-[11px] font-bold">IP68 / MIL-STD-810H</span></td>
+<td class="px-8 py-4 font-body-sm text-secondary">Android 13 / GMS</td>
+<td class="px-8 py-4 font-body-sm text-secondary">2-4 Weeks</td>
+<td class="px-8 py-4"><span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">more_vert</span></td>
+</tr>
+<tr>
+<td class="px-8 py-4 font-label-md text-primary font-bold">SCAN-Z 400</td>
+<td class="px-8 py-4 font-body-sm">Bluetooth Scanner</td>
+<td class="px-8 py-4"><span class="bg-status-info/10 text-status-info px-2 py-0.5 rounded text-[11px] font-bold">IP65 / 3m Drop</span></td>
+<td class="px-8 py-4 font-body-sm text-secondary">iOS / Win / Android</td>
+<td class="px-8 py-4 font-body-sm text-secondary">In Stock</td>
+<td class="px-8 py-4"><span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">more_vert</span></td>
+</tr>
+<tr>
+<td class="px-8 py-4 font-label-md text-primary font-bold">FR-88 RFID Gate</td>
+<td class="px-8 py-4 font-body-sm">Fixed Reader</td>
+<td class="px-8 py-4"><span class="bg-status-info/10 text-status-info px-2 py-0.5 rounded text-[11px] font-bold">Industrial Die-Cast</span></td>
+<td class="px-8 py-4 font-body-sm text-secondary">LogiQ-Connect API</td>
+<td class="px-8 py-4 font-body-sm text-secondary">6-8 Weeks</td>
+<td class="px-8 py-4"><span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">more_vert</span></td>
+</tr>
+<tr>
+<td class="px-8 py-4 font-label-md text-primary font-bold">LX-7200 Tablet</td>
+<td class="px-8 py-4 font-body-sm">Mounted Terminal</td>
+<td class="px-8 py-4"><span class="bg-status-info/10 text-status-info px-2 py-0.5 rounded text-[11px] font-bold">HazLoc Class 1 Div 2</span></td>
+<td class="px-8 py-4 font-body-sm text-secondary">Windows 11 IOT</td>
+<td class="px-8 py-4 font-body-sm text-secondary">4 Weeks</td>
+<td class="px-8 py-4"><span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">more_vert</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Comparison / Call to Action Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-8 border border-outline-variant rounded-lg bg-surface-container-low flex gap-6">
+<div class="w-16 h-16 bg-white border border-outline-variant rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Need a Custom Demo?</h4>
+<p class="font-body-md text-body-md text-secondary mb-4">We offer on-site hardware proof-of-concepts for enterprise deployments over 500 units.</p>
+<button class="text-primary font-bold hover:underline flex items-center gap-1">Request Demo Unit <span class="material-symbols-outlined text-[18px]">arrow_outward</span></button>
+</div>
+</div>
+<div class="p-8 border border-outline-variant rounded-lg bg-surface-container-low flex gap-6">
+<div class="w-16 h-16 bg-white border border-outline-variant rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_sync</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Device Management</h4>
+<p class="font-body-md text-body-md text-secondary mb-4">Centralize your fleet monitoring with LogiQ-MDM. Remote lock, wipe, and updates.</p>
+<button class="text-primary font-bold hover:underline flex items-center gap-1">Explore Software <span class="material-symbols-outlined text-[18px]">arrow_outward</span></button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-on-surface-variant w-full mt-auto border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-surface-bright block mb-4">LogiQ-On Tech</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant leading-relaxed mb-6">
+                    Global leaders in industrial IoT infrastructure and supply chain hardware systems. Engineered for reliability in the most extreme conditions.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer">qr_code_2</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer">linked_camera</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer">rss_feed</span>
+</div>
+</div>
+<div>
+<h5 class="font-label-sm text-label-sm text-outline uppercase tracking-widest mb-6">Products</h5>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant">
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Mobile Computers</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Barcode Scanners</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">RFID Readers</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Printers & Media</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-sm text-label-sm text-outline uppercase tracking-widest mb-6">Corporate</h5>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant">
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">About Us</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Sustainability</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Investor Relations</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Global Locations</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-sm text-label-sm text-outline uppercase tracking-widest mb-6">Support</h5>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant">
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Software Downloads</a></li>
+<li><a class="hover:underline hover:text-primary dark:hover:text-tertiary-fixed-dim transition-all" href="#">Contact Sales</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-6 px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant">© 2024 LogiQ-On Tech. All rights reserved. Industrial Grade Reliability.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">verified</span>
+<span class="font-label-sm text-label-sm text-outline">SECURE ENTERPRISE PARTNER</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for table rows
+        document.querySelectorAll('tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.transition = 'background-color 0.15s ease';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products &amp; Solutions | LogiQ-On Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "status-warning": "#F59E0B",
+                        "surface-tint": "#324ddd",
+                        "on-secondary-fixed-variant": "#474647",
+                        "primary": "#2f4adb",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "surface-dim": "#d9dadc",
+                        "tertiary-fixed-dim": "#87cffb",
+                        "outline-variant": "#c5c5d7",
+                        "surface-container-low": "#f3f4f6",
+                        "primary-fixed": "#dee0ff",
+                        "status-info": "#5770FF",
+                        "surface-bright": "#f8f9fb",
+                        "on-primary-container": "#fffbff",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fb",
+                        "secondary-fixed": "#e4e2e3",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#4c66f5",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#e4e2e3",
+                        "surface-container-high": "#e7e8ea",
+                        "on-secondary-container": "#656465",
+                        "on-surface-variant": "#444655",
+                        "brand-accent-purple": "#8110FF",
+                        "surface-container": "#edeef0",
+                        "inverse-on-surface": "#f0f1f3",
+                        "tertiary-fixed": "#c5e7ff",
+                        "tertiary": "#006388",
+                        "surface-variant": "#e1e2e4",
+                        "on-surface": "#191c1e",
+                        "surface-container-highest": "#e1e2e4",
+                        "secondary": "#5f5e5f",
+                        "status-error": "#EF4444",
+                        "on-tertiary-fixed-variant": "#004c6a",
+                        "status-success": "#10B981",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-background": "#191c1e",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "data-viz-cyan": "#8BD3FF",
+                        "outline": "#757686",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001e2d",
+                        "inverse-primary": "#bbc3ff",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "on-primary-fixed": "#000f5c",
+                        "tertiary-container": "#2c7ca4",
+                        "surface": "#f8f9fb",
+                        "on-primary-fixed-variant": "#0a30c6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "top-nav-height": "64px",
+                        "sidebar-width": "260px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .transition-standard {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .industrial-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(117, 118, 134, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-top-nav-height z-50 flex items-center justify-between px-margin-desktop bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-8">
+<span class="text-headline-md font-headline-md font-bold text-on-background">LogiQ-On Tech</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1" href="#">Products</a>
+<a class="text-label-md font-label-md text-secondary hover:text-on-background transition-colors" href="#">Solutions</a>
+<a class="text-label-md font-label-md text-secondary hover:text-on-background transition-colors" href="#">Industries</a>
+<a class="text-label-md font-label-md text-secondary hover:text-on-background transition-colors" href="#">Partners</a>
+<a class="text-label-md font-label-md text-secondary hover:text-on-background transition-colors" href="#">Retail</a>
+<a class="text-label-md font-label-md text-secondary hover:text-on-background transition-colors" href="#">Buzz</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-1.5 border border-outline-variant">
+<span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Search Inventory..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-secondary hover:text-primary transition-standard">notifications</button>
+<button class="material-symbols-outlined text-secondary hover:text-primary transition-standard">account_circle</button>
+<button class="px-5 py-2 bg-primary text-on-primary text-label-md font-label-md rounded transition-standard hover:opacity-90 scale-100 active:scale-95">Get Demo</button>
+</div>
+</div>
+</header>
+<main class="pt-top-nav-height">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqP9OR103huJTAJbh7qTGHp3aF_WFSo9bjGeNG5X34hWGfO0_cft7uuYu2KA-wvGrNHHBtgr0pqEy2MFr9qpmjU_BJzCg0jB6RWgyBpdlRvNf33IyLetL9cl2lnhFKi7mCPnLFiruOCJgslz12j5z_SaYznVqGSjo1pmpl0fGWkOPqeAqoNEfIiIJwXybjYAfkbxq-O0a3Q4vd0npGmYpo36gEmhm1yFVevXi5JGB_P7nkzk3-RMCt1dypX1KfNxt6LYBKESahczA');"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-10">
+<div class="max-w-2xl">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary text-label-sm font-label-sm mb-6 rounded-sm tracking-widest">INDUSTRIAL PRECISION</span>
+<h1 class="text-display-lg font-display-lg text-white mb-6 leading-tight">
+                        Precision Hardware &amp; <br/>Software for Modern Logistics
+                    </h1>
+<p class="text-body-lg text-surface-variant mb-8 max-w-lg leading-relaxed">
+                        End-to-end operational clarity powered by ruggedized hardware and cloud-native software ecosystems. Built for global scale.
+                    </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary text-label-md font-label-md rounded font-bold transition-standard hover:shadow-lg">Explore Solutions</button>
+<button class="px-8 py-4 bg-transparent border border-white text-white text-label-md font-label-md rounded font-bold transition-standard hover:bg-white/10">Technical Specs</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Categories Bento -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-on-background mb-2">Core Product Categories</h2>
+<p class="text-body-md text-on-surface-variant">Industrial-grade instrumentation for the high-density supply chain.</p>
+</div>
+<button class="flex items-center text-primary font-bold gap-2 group">
+<span class="text-label-md">View All Hardware</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="bento-grid">
+<!-- Barcode Scanners -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 relative group overflow-hidden">
+<div class="flex flex-col md:flex-row gap-8 items-center relative z-10">
+<div class="w-full md:w-1/2">
+<span class="text-label-sm text-primary mb-2 block">CAPTURE DATA ANYWHERE</span>
+<h3 class="text-headline-md font-headline-md mb-4 text-on-background">Barcode Scanners</h3>
+<p class="text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                                    From high-volume rugged handhelds to hands-free wearable scanners, LogiQ-On hardware ensures 99.9% read rates in extreme industrial conditions.
+                                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                        Rugged Series (IP67 Rated)
+                                    </li>
+<li class="flex items-center gap-3 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                        Wearable Bluetooth Ring Scanners
+                                    </li>
+</ul>
+<button class="px-6 py-2 border border-primary text-primary text-label-md rounded hover:bg-primary hover:text-on-primary transition-standard">Configure Model</button>
+</div>
+<div class="w-full md:w-1/2">
+<img class="w-full h-auto object-cover rounded-lg shadow-xl" data-alt="A professional product shot of a rugged barcode scanner being held by a gloved worker in a high-tech warehouse. The lighting is crisp and cool-toned, reflecting off the industrial surfaces. The scanner features a bright digital display showing real-time inventory metrics and a green 'success' laser beam targeting a shipping label. High contrast, sharp focus, modern logistics aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOtvhAtefw00-lkLDB_tflAuNZraP3aVLB9LcajchlooEMz99fPslECGvZDMi6APEXKZmdXGwnfRzxB7eJoUVCJyS2IxK_fJlzx9IsEcubzMs_nSfj-SPR4cebzO2d792Lty11p0eh6AbSXtdJzoLRSPRxJ1bAa-dVRbXh1dHMNEkE5Vzmru_lxvPu1PSqVJvX5-rT69agnvDXDqeqgSpSU0wsLSlqGsWyEYklMLU0f07-r3OnpAfqUKO1DjCwi5-W7dujNYfAH0o"/>
+</div>
+</div>
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- Label Printing -->
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between group">
+<div>
+<h3 class="text-headline-sm font-headline-sm mb-3">Label Printing</h3>
+<p class="text-body-sm text-on-surface-variant mb-6">Thermal transfer and direct thermal printing solutions for high-throughput labeling and shipping lanes.</p>
+</div>
+<div class="py-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-md font-label-md text-secondary">Industrial Desktop &amp; Mobile</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-standard">print</span>
+</div>
+</div>
+<!-- Mobile Computers -->
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-on-background p-8 flex flex-col justify-between relative group overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">Mobile Computers</h3>
+<p class="text-body-sm text-surface-dim mb-8">Rugged Handhelds and tablets running enterprise-grade OS for real-time fleet and asset management.</p>
+</div>
+<div class="relative z-10">
+<img class="w-full h-40 object-cover rounded-lg mb-4 opacity-90 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCm3BTSj6Q0L3RoGS0jt8MlOpBfzNUB5fpxuh8CrAoAU8T50F5uG_9DC7v9T_Rvc30Uw3NfSU3bmRiJgwLV0-opy6hxXx0H7t11wDV1dlrU0tRednU5zIVJS5uWH7pwlLhdIzlScMHOLSIsdsMFLaLuqd51lTHF04K6pwGVNY1Eb7Ubfb-yEL-KqFc9fLHJG83cmB0zH_QwrsLyXgIkjkt8XhuGi7_nxoZr5qPErSV6vbjJW1lCyn82n5OYSn_xGTCMmAe5o5HZcs"/>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-primary text-white text-[10px] font-label-sm rounded uppercase">Handheld</span>
+<span class="px-2 py-1 bg-secondary text-white text-[10px] font-label-sm rounded uppercase">Enterprise Tablet</span>
+</div>
+</div>
+</div>
+<!-- RFID Solutions -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden group">
+<div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+<div class="w-full md:w-1/2">
+<span class="text-label-sm text-status-info mb-2 block">NO-CONTACT TRACKING</span>
+<h3 class="text-headline-md font-headline-md mb-4 text-on-background">RFID Solutions</h3>
+<p class="text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                                    Deploy passive and active RFID ecosystems to track thousands of items simultaneously with zero line-of-sight required.
+                                </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface rounded">
+<div class="text-headline-sm font-headline-sm text-primary mb-1">99.9%</div>
+<div class="text-label-sm text-secondary">Asset Accuracy</div>
+</div>
+<div class="p-4 bg-surface rounded">
+<div class="text-headline-sm font-headline-sm text-primary mb-1">&lt; 2ms</div>
+<div class="text-label-sm text-secondary">Latent Response</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface h-64 rounded-lg flex items-center justify-center relative border border-dashed border-outline-variant">
+<span class="material-symbols-outlined text-[64px] text-outline opacity-20">sensors</span>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Software Solutions -->
+<section class="py-24 bg-on-background text-white relative overflow-hidden">
+<div class="container mx-auto px-margin-desktop relative z-10">
+<div class="max-w-xl mb-16">
+<h2 class="text-headline-lg font-headline-lg mb-4">Software Solutions</h2>
+<p class="text-body-lg text-surface-dim">Cloud-native intelligence layers that bridge the gap between hardware telemetry and operational ROI.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Stock Taking -->
+<div class="p-8 border border-white/10 hover:border-primary/50 transition-standard group">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded mb-6 group-hover:scale-110 transition-standard">
+<span class="material-symbols-outlined">inventory</span>
+</div>
+<h4 class="text-headline-sm font-headline-sm mb-4">Stock Taking AI</h4>
+<p class="text-body-sm text-surface-dim mb-8">Automated inventory reconciliation using computer vision and sensor fusion to eliminate human error during cycle counts.</p>
+<a class="text-label-md font-label-md text-primary-fixed-dim hover:text-white transition-colors inline-flex items-center gap-2" href="#">
+                            Product Specs <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- Asset Tracking -->
+<div class="p-8 border border-white/10 hover:border-primary/50 transition-standard group">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded mb-6 group-hover:scale-110 transition-standard">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h4 class="text-headline-sm font-headline-sm mb-4">RTLS Asset Tracking</h4>
+<p class="text-body-sm text-surface-dim mb-8">Real-Time Location System (RTLS) tracking for high-value machinery, forklifts, and pallets across multi-site facilities.</p>
+<a class="text-label-md font-label-md text-primary-fixed-dim hover:text-white transition-colors inline-flex items-center gap-2" href="#">
+                            Deployment Guide <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- Warehouse Analytics -->
+<div class="p-8 border border-white/10 hover:border-primary/50 transition-standard group">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded mb-6 group-hover:scale-110 transition-standard">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h4 class="text-headline-sm font-headline-sm mb-4">Ops Intelligence</h4>
+<p class="text-body-sm text-surface-dim mb-8">Integrated BI dashboard providing heatmaps, bottleneck alerts, and predictive maintenance schedules for hardware fleets.</p>
+<a class="text-label-md font-label-md text-primary-fixed-dim hover:text-white transition-colors inline-flex items-center gap-2" href="#">
+                            Dashboard Demo <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute bottom-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full stroke-white fill-none stroke-[0.1]" viewbox="0 0 100 100">
+<path d="M0 100 L20 80 L40 90 L60 70 L80 85 L100 60"></path>
+<path d="M0 90 L20 70 L40 80 L60 60 L80 75 L100 50"></path>
+<path d="M0 80 L20 60 L40 70 L60 50 L80 65 L100 40"></path>
+</svg>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-margin-desktop">
+<div class="bg-primary-container rounded-xl p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-white max-w-lg">
+<h2 class="text-headline-lg font-headline-lg mb-4">Request a Hardware Audit</h2>
+<p class="text-body-md opacity-90">Work with our systems engineers to evaluate your current scanning and printing infrastructure for efficiency gaps.</p>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-8 py-4 bg-white text-primary font-bold rounded shadow-xl hover:bg-surface-container transition-standard">Schedule Audit</button>
+<button class="flex-1 md:flex-none px-8 py-4 bg-transparent border border-white text-white font-bold rounded hover:bg-white/10 transition-standard">Contact Sales</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-margin-desktop px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest border-t border-outline-variant">
+<div class="max-w-sm">
+<span class="text-headline-sm font-headline-sm font-bold text-on-background mb-4 block">LogiQ-On Tech</span>
+<p class="text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Global leaders in industrial IoT, ruggedized data capture, and enterprise warehouse management systems. Enabling the backbone of global commerce.
+            </p>
+<div class="flex gap-4">
+<a class="material-symbols-outlined text-secondary hover:text-primary transition-standard" href="#">public</a>
+<a class="material-symbols-outlined text-secondary hover:text-primary transition-standard" href="#">share</a>
+<a class="material-symbols-outlined text-secondary hover:text-primary transition-standard" href="#">mail</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h5 class="text-label-md font-label-md text-on-surface mb-4 uppercase tracking-wider">Resources</h5>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Support Portal</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">SDK Documentation</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">White Papers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-md font-label-md text-on-surface mb-4 uppercase tracking-wider">Company</h5>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">About Us</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Careers</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Legal &amp; Privacy</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="text-label-md font-label-md text-on-surface mb-4 uppercase tracking-wider">Global HQ</h5>
+<address class="not-italic text-body-sm text-on-surface-variant">
+                    100 Logistics Way<br/>
+                    Silicon Valley, CA 94025<br/>
+                    United States
+                </address>
+</div>
+</div>
+<div class="w-full mt-12 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between gap-4">
+<span class="text-label-sm font-label-sm text-secondary-fixed-dim">© 2024 LogiQ-On Tech. Industrial Precision.</span>
+<div class="flex gap-6">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary" href="#">Home</a>
+<a class="text-label-sm font-label-sm text-primary font-bold" href="#">Solutions</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for TopNavBar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.replace('bg-surface', 'bg-surface/90');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.replace('bg-surface/90', 'bg-surface');
+            }
+        });
+
+        // Hover micro-interactions for cards
+        const cards = document.querySelectorAll('.bento-grid > div');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+            card.classList.add('transition-standard');
+        });
+    </script>
+</body></html>

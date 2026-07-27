@@ -7,9 +7,20 @@ export type NavLink = {
 export const NAV_LINKS: NavLink[] = [
   { key: "home", label: "Home", href: "/" },
   { key: "about", label: "About Us", href: "/about" },
-  { key: "products", label: "Products & Solutions", href: "/products" },
+  { key: "products", label: "Products", href: "/products" },
+  { key: "industries", label: "Industries", href: "/industries" },
+  { key: "solutions", label: "Solutions", href: "/solutions" },
+  { key: "partners", label: "Partners", href: "/partners" },
+  { key: "retail-stores", label: "Retail Stores", href: "/retail-stores" },
   { key: "buzz", label: "LogiQ-On Buzz", href: "/buzz" },
   { key: "contact", label: "Contact Us", href: "/contact" },
+];
+
+export const UTILITY_LINKS: NavLink[] = [
+  { key: "request-demo", label: "Request Demo", href: "/request-demo" },
+  { key: "request-quote", label: "Request Quote", href: "/request-quote" },
+  { key: "customer-login", label: "Customer Login", href: "/customer-login" },
+  { key: "vendor-login", label: "Vendor Login", href: "/vendor-login" },
 ];
 
 export function getAssetPath(path: string): string {

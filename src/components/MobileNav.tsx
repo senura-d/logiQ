@@ -21,6 +21,9 @@ export default function MobileNav({ onNavigate }: { onNavigate: () => void }) {
         <Link href="/request?type=quote" className="btn btn-ghost btn-block" onClick={onNavigate}>
           Request Quote
         </Link>
+        <Link href="/request?type=demo" className="btn btn-ghost btn-block" onClick={onNavigate}>
+          Request Demo
+        </Link>
       </div>
     </div>
   );

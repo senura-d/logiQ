@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partners | LogiQ-On Tech</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Hanken+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#006388",
+                    "outline": "#757686",
+                    "surface-variant": "#e1e2e4",
+                    "secondary-container": "#e4e2e3",
+                    "status-info": "#5770FF",
+                    "on-secondary-fixed-variant": "#474647",
+                    "status-success": "#10B981",
+                    "tertiary-fixed-dim": "#87cffb",
+                    "surface-tint": "#324ddd",
+                    "secondary-fixed": "#e4e2e3",
+                    "surface-container": "#edeef0",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#bbc3ff",
+                    "data-viz-cyan": "#8BD3FF",
+                    "on-tertiary-fixed-variant": "#004c6a",
+                    "surface-container-highest": "#e1e2e4",
+                    "status-warning": "#F59E0B",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-primary-fixed-variant": "#0a30c6",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#fcfcff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f4f6",
+                    "outline-variant": "#c5c5d7",
+                    "primary": "#2f4adb",
+                    "inverse-surface": "#2e3132",
+                    "primary-container": "#4c66f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9fb",
+                    "status-error": "#EF4444",
+                    "secondary": "#5f5e5f",
+                    "brand-accent-purple": "#8110FF",
+                    "secondary-fixed-dim": "#c8c6c7",
+                    "on-surface-variant": "#444655",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-container": "#656465",
+                    "on-tertiary-fixed": "#001e2d",
+                    "tertiary-fixed": "#c5e7ff",
+                    "on-surface": "#191c1e",
+                    "tertiary-container": "#2c7ca4",
+                    "surface-container-high": "#e7e8ea",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9fb",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed": "#000f5c",
+                    "surface-dim": "#d9dadc",
+                    "surface": "#f8f9fb",
+                    "on-secondary-fixed": "#1b1b1c",
+                    "primary-fixed-dim": "#bbc3ff",
+                    "primary-fixed": "#dee0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "sidebar-width": "260px",
+                    "gutter": "16px",
+                    "top-nav-height": "64px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .partnership-card:hover .partner-icon {
+            transform: translateY(-4px);
+        }
+        .industrial-grid {
+            background-image: radial-gradient(circle, #e1e2e4 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-top-nav-height px-margin-desktop max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface cursor-pointer">
+                LogiQ-On Tech
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Products</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Solutions</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Industries</a>
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 transition-colors" href="#">Partners</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Retail</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Buzz</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">language</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">search</span>
+<button class="bg-primary text-on-primary px-6 py-2 font-body-md text-body-md font-bold rounded-lg hover:bg-primary-container transition-all active:opacity-70">
+                    Contact Us
+                </button>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden industrial-grid border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-margin-desktop relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase block mb-4">Ecosystem of Excellence</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">Precision Partners for Global Supply Chains</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            We collaborate with the world's most trusted technology providers to deliver industrial-grade reliability. Together, we bridge the gap between complex hardware and intelligent software orchestration.
+                        </p>
+</div>
+<div class="flex-1 w-full max-w-lg">
+<div class="relative rounded-xl overflow-hidden shadow-xl aspect-square border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A professional high-angle photograph of a modern, brightly lit technology showroom featuring sleek industrial handheld scanners, high-performance routers, and enterprise networking hardware displayed on minimalist white pedestals. The atmosphere is clean and high-tech, using a palette of white, light grey, and subtle industrial blue accents, reflecting precision and corporate reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRjMG-KuiFNF2V70PPeFp9eng_4m21sEtNUGJ2utGvn9Hg3tdcBi1f6OWqXYrsC0DwTCq1dhY__YBxRBGv63i_Qyx9jfcgi4LvYCVIH2vC56Ht7N7UxigHrlFGNzmo1ttFBiI681m-rbjYY8QgyjK2aevpWKmVsJw5k8PvsDykUgnhWMfQBNNwiVkTuU_P3INt1grqN6irZhSp6_FBpOV4cuFjPoWNTNiPgNTzz43404JK19_jC-Nz1SS_esG2YvvtN8EzpJGhjkM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Tiers / Strategic Alliances -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Strategic Alliances</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Providing unified support and specialized integration services for our core hardware and software partners.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Alliance Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">verified</span>
+<h3 class="font-headline-sm text-headline-sm">Premier Integration</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Deep-level API synchronization between LogiQ-On software and partner hardware for zero-latency operations.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+                                Direct Firmware Support
+                            </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+                                Certified Device Management
+                            </li>
+</ul>
+</div>
+<!-- Alliance Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">support_agent</span>
+<h3 class="font-headline-sm text-headline-sm">Unified Support</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A single point of contact for both hardware and software troubleshooting, reducing downtime by up to 40%.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+                                24/7 Global NOC Access
+                            </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+                                Expedited RMA Processing
+                            </li>
+</ul>
+</div>
+<!-- Alliance Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">precision_manufacturing</span>
+<h3 class="font-headline-sm text-headline-sm">Co-Engineering</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Joint R&amp;D efforts to develop custom ruggedized solutions specifically for high-density warehouse environments.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+                                Early Access to Tech
+                            </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+                                Custom Solution Lab
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Directory -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Technology Directory</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">World-class infrastructure for global operations.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="px-4 py-2 border border-outline rounded-lg font-body-sm text-body-sm hover:bg-surface-container transition-colors">All Categories</button>
+<button class="px-4 py-2 border border-outline rounded-lg font-body-sm text-body-sm hover:bg-surface-container transition-colors">Networking</button>
+<button class="px-4 py-2 border border-outline rounded-lg font-body-sm text-body-sm hover:bg-surface-container transition-colors">AIDC &amp; Mobility</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Partner: Zebra -->
+<div class="partnership-card group bg-surface-container-lowest border border-outline-variant p-1 rounded-xl overflow-hidden transition-all hover:border-primary">
+<div class="p-6">
+<div class="w-20 h-20 mb-6 bg-white rounded-lg border border-outline-variant flex items-center justify-center partner-icon transition-transform">
+<img class="w-12 h-12 grayscale group-hover:grayscale-0 transition-all" data-alt="A clean, minimalist logo for a major technology hardware brand specializing in logistics and printing. The logo is displayed in a flat, high-contrast monochrome style on a crisp white background, emphasizing industrial precision and corporate authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArZ0z_xub3egv0RbJQh2YMdrQ-hqSRGbYNZb76Inum8ISPfiich_JMkk2O9UJ-FhxquYhYYiMFw5HWj5lOoQs_YBisdnJ8FInFWmM7caVwjU6UF_x_sXL3lKQCtQJS7hG-NVwZbl42FV2c3MicuT_lhqT0nwwR3h3LtpYdgfz-HF-oLcqImVzxmNhrQXc2p4Wh8zxv01JPAiObdBS96MAlMRSObsDOX1JWMdBcHEvvDITnV1U_V4qhApBIpMC6ibsLEUC67S5mVN0"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Zebra Technologies</h4>
+<div class="inline-flex items-center px-2 py-1 bg-status-info/10 text-status-info rounded font-label-sm text-label-sm mb-4">Elite Partner</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Global leader in barcoding and mobility solutions. LogiQ-On is a certified Gold Integration Partner for the full MC and TC series rugged devices.</p>
+</div>
+<div class="bg-surface-container-low px-6 py-3 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-secondary">AIDC / Mobility</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Partner: Honeywell -->
+<div class="partnership-card group bg-surface-container-lowest border border-outline-variant p-1 rounded-xl overflow-hidden transition-all hover:border-primary">
+<div class="p-6">
+<div class="w-20 h-20 mb-6 bg-white rounded-lg border border-outline-variant flex items-center justify-center partner-icon transition-transform">
+<img class="w-12 h-12 grayscale group-hover:grayscale-0 transition-all" data-alt="A professional, corporate logo for a global industrial engineering and technology leader. The branding is presented in a crisp, sharp-edged format, using classic deep colors on a neutral, high-key white background for a modern, architectural aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLqv4guw0bkSFhv-UJfaW5ImQ5vcuo22FtK4Uo2n6KRBtGGhfT8PFgMog_e8iybKDUC89ieDXU1Zqc4qkywdebyhhE7HTfgSK7R0MOsyxEhcfLZps35AS8z6LbqqaggeuLSFp8psPmmMyPYZQr7EtKnSKzsQzVTfpu2Ro9H6mz3ub3-RApf2HoJvUj3ohOfEILjhZJqhTrroHZKl1fY7t-Vss1GWF43Xa81m4W8hxpHBIenzGcIBCb3_ogf3Czm23TMTPIE1PLfY"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Honeywell</h4>
+<div class="inline-flex items-center px-2 py-1 bg-status-info/10 text-status-info rounded font-label-sm text-label-sm mb-4">Strategic Tier</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Industrial automation and safety solutions. We specialize in Honeywell's voice-directed picking systems and advanced sensing technologies.</p>
+</div>
+<div class="bg-surface-container-low px-6 py-3 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-secondary">Automation</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Partner: Cambium Networks -->
+<div class="partnership-card group bg-surface-container-lowest border border-outline-variant p-1 rounded-xl overflow-hidden transition-all hover:border-primary">
+<div class="p-6">
+<div class="w-20 h-20 mb-6 bg-white rounded-lg border border-outline-variant flex items-center justify-center partner-icon transition-transform">
+<img class="w-12 h-12 grayscale group-hover:grayscale-0 transition-all" data-alt="A modern networking technology brand logo. The icon uses clean lines and geometric shapes to represent connectivity and wireless high-speed data transmission. Rendered in a high-contrast corporate style with subtle industrial grey and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZQsqkUAwWTdflLgk0qNgyVyLk0PiMkhOw81KkRZopiUFcaxlW9S7cHKfx2M4U1mr8cRty4osGqTsVG6DSOFzXF7HKmLDxlOwnm3kZQRoabwA8plvGyXKTYT_yUOa_IA3o6e_MlU3DdLAJ4H1qGtEUTUfz1I93s0wkSKjtvjrkLolqSP-2HwOGCK5yECpRv0ydTtgnlvGmOYRawvj8sKOCta520M-OxknC8ZXmR-L1Yq05gt7S0uWgojZxKArdPWNHSrQL4Ve_y0c"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Cambium Networks</h4>
+<div class="inline-flex items-center px-2 py-1 bg-primary/10 text-primary rounded font-label-sm text-label-sm mb-4">Wireless Specialist</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Multi-gigabit wireless fabric provider. LogiQ-On utilizes Cambium for high-density outdoor yard connectivity and point-to-point backhaul.</p>
+</div>
+<div class="bg-surface-container-low px-6 py-3 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-secondary">Wireless Infrastructure</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Partner: Ruckus Wireless -->
+<div class="partnership-card group bg-surface-container-lowest border border-outline-variant p-1 rounded-xl overflow-hidden transition-all hover:border-primary">
+<div class="p-6">
+<div class="w-20 h-20 mb-6 bg-white rounded-lg border border-outline-variant flex items-center justify-center partner-icon transition-transform">
+<img class="w-12 h-12 grayscale group-hover:grayscale-0 transition-all" data-alt="A professional networking logo representing high-performance Wi-Fi and enterprise connectivity. The design is minimalist, clean, and modern, using professional navy and white colors, set against a pristine, light-mode background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtcBdKpMzjbaYR_lFCBiMZ2rebRDvf9bjxpCLoeFMS5e1jxEyI9B9f3vDooSN-TgQLlC5No-giS1QhajzdcZ_FY9qFPmb4-ikV0ANRSRY6pX1hsUyzfUo13fhkccPx9X_NRgdbBI--aXmnQoezm2F2eW_lmkO8e2ettMaFgHrtzSn0X3Oz_YVQkIXl8OeEqblFJ_1YOeQ-ki3qZPTePlBxB3BBijp-6b_tDClE5yn-nvP_v17M-bDHyDOgYwpQElidNYncP4pUyHM"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Ruckus Wireless</h4>
+<div class="inline-flex items-center px-2 py-1 bg-primary/10 text-primary rounded font-label-sm text-label-sm mb-4">Enterprise Tier</div>
+<p class="font-body-md text-body-md text-on-surface-variant">High-performance Wi-Fi for dense warehouse environments. We deploy Ruckus BeamFlex+ technology for reliable connectivity in steel-heavy zones.</p>
+</div>
+<div class="bg-surface-container-low px-6 py-3 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-secondary">Indoor Networking</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Partner: Extreme Networks -->
+<div class="partnership-card group bg-surface-container-lowest border border-outline-variant p-1 rounded-xl overflow-hidden transition-all hover:border-primary">
+<div class="p-6">
+<div class="w-20 h-20 mb-6 bg-white rounded-lg border border-outline-variant flex items-center justify-center partner-icon transition-transform">
+<img class="w-12 h-12 grayscale group-hover:grayscale-0 transition-all" data-alt="An enterprise cloud-driven networking brand logo. The style is sharp, professional, and tech-forward, utilizing clean typography and a simple abstract geometric mark. The logo is displayed on a clean white background to reflect a modern enterprise aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOyDlGz8vaBRIb5kbHK48wFrDO8V40wHEkr8hOtLp4K4PQr-Ggr4L-7xs_oM74O7-z7N3Qaa-wtTsk52alldSVybscTSiAduaZBpI540v5VBdXbP8W_1VAhkW2p8kCOLsdAf6DMzz_JLWp4YoGsESSVYOIcYH6d93ZiEaQF6AqIY8WRxsPOeNavLqBun09gpAdeODjd4B5HYw9uTFTMx4tq_dGaiHkvjDiTJFsdV6b1JHegQeH0GQhlIE1nP1tEldx9jPU4kTN_dI"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Extreme Networks</h4>
+<div class="inline-flex items-center px-2 py-1 bg-primary/10 text-primary rounded font-label-sm text-label-sm mb-4">Cloud-Driven</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Cloud-managed networking solutions. LogiQ-On integrates ExtremeCloud IQ for simplified, remote-first management of global logistics hubs.</p>
+</div>
+<div class="bg-surface-container-low px-6 py-3 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-secondary">Cloud Networking</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Partner CTA -->
+<div class="bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Join Our Ecosystem</h4>
+<p class="font-body-md text-body-md opacity-90">Become a certified LogiQ-On Tech partner and help define the future of industrial supply chain logistics.</p>
+</div>
+<div class="mt-8">
+<button class="bg-white text-primary px-6 py-3 rounded-lg font-bold font-body-md w-full hover:bg-primary-container hover:text-white transition-all">Apply for Partnership</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partnership Benefits / Data Viz -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Why These Alliances Matter</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="bg-primary-container p-3 rounded-lg h-fit">
+<span class="material-symbols-outlined text-white">speed</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface">99.9% Operational Uptime</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Pre-validated hardware stacks mean zero configuration errors during deployment.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-primary-container p-3 rounded-lg h-fit">
+<span class="material-symbols-outlined text-white">security</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface">End-to-End Security</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep integration allows for hardware-level encryption management via the LogiQ-On dashboard.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-primary-container p-3 rounded-lg h-fit">
+<span class="material-symbols-outlined text-white">query_stats</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface">Advanced Telemetry</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct access to battery health, signal strength, and device location across all partner brands.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Tech Stat Cards (Bento-like) -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm h-40 flex flex-col justify-center text-center">
+<span class="font-display-lg text-display-lg text-primary block">15+</span>
+<span class="font-label-md text-label-md text-secondary uppercase">Year Alliances</span>
+</div>
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm h-40 flex flex-col justify-center text-center translate-y-8">
+<span class="font-display-lg text-display-lg text-status-success block">500k</span>
+<span class="font-label-md text-label-md text-secondary uppercase">Devices Managed</span>
+</div>
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm h-40 flex flex-col justify-center text-center">
+<span class="font-display-lg text-display-lg text-tertiary block">100%</span>
+<span class="font-label-md text-label-md text-secondary uppercase">QA Certified</span>
+</div>
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm h-40 flex flex-col justify-center text-center translate-y-8">
+<span class="font-display-lg text-display-lg text-brand-accent-purple block">24/7</span>
+<span class="font-label-md text-label-md text-secondary uppercase">Support Relay</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-on-surface-variant w-full mt-auto border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-surface-bright mb-6">
+                    LogiQ-On Tech
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant mb-6">
+                    Engineering reliability into global logistics through intelligent technology orchestration.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary">share</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary">public</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:underline hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:underline hover:text-primary transition-all" href="#">Sustainability</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:underline hover:text-primary transition-all" href="#">Investor Relations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:underline hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:underline hover:text-primary transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:underline hover:text-primary transition-all" href="#">Global Locations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-6">Newsletter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant mb-4">Industrial insights delivered monthly.</p>
+<div class="flex">
+<input class="bg-surface-container-lowest border-outline-variant rounded-l px-4 py-2 w-full font-body-sm focus:ring-primary focus:border-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-r font-bold font-body-sm hover:bg-primary-container transition-all">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-6 px-margin-desktop max-w-7xl mx-auto">
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant text-center md:text-left">
+                © 2024 LogiQ-On Tech. All rights reserved. Industrial Grade Reliability.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.partnership-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0px)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LogiQ-On Tech | Intelligent Modern Logistics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#c5c5d7",
+            "on-secondary-fixed": "#1b1b1c",
+            "status-info": "#5770FF",
+            "data-viz-cyan": "#8BD3FF",
+            "surface-variant": "#e1e2e4",
+            "primary-fixed-dim": "#bbc3ff",
+            "on-primary-fixed": "#000f5c",
+            "on-tertiary-fixed": "#001e2d",
+            "tertiary-container": "#2c7ca4",
+            "tertiary-fixed": "#c5e7ff",
+            "background": "#f8f9fb",
+            "on-tertiary": "#ffffff",
+            "status-success": "#10B981",
+            "on-primary-fixed-variant": "#0a30c6",
+            "secondary-container": "#e4e2e3",
+            "surface-tint": "#324ddd",
+            "surface-container-low": "#f3f4f6",
+            "status-error": "#EF4444",
+            "inverse-on-surface": "#f0f1f3",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#e4e2e3",
+            "status-warning": "#F59E0B",
+            "tertiary": "#006388",
+            "on-tertiary-fixed-variant": "#004c6a",
+            "on-background": "#191c1e",
+            "secondary-fixed-dim": "#c8c6c7",
+            "primary-container": "#4c66f5",
+            "secondary": "#5f5e5f",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#bbc3ff",
+            "on-surface-variant": "#444655",
+            "on-secondary": "#ffffff",
+            "surface": "#f8f9fb",
+            "surface-container-high": "#e7e8ea",
+            "tertiary-fixed-dim": "#87cffb",
+            "on-secondary-fixed-variant": "#474647",
+            "surface-container": "#edeef0",
+            "surface-dim": "#d9dadc",
+            "brand-accent-purple": "#8110FF",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "inverse-surface": "#2e3132",
+            "on-secondary-container": "#656465",
+            "outline": "#757686",
+            "on-primary-container": "#fffbff",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#fcfcff",
+            "primary": "#2f4adb",
+            "surface-bright": "#f8f9fb",
+            "surface-container-highest": "#e1e2e4",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dee0ff",
+            "on-surface": "#191c1e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "sidebar-width": "260px",
+            "margin-mobile": "16px",
+            "top-nav-height": "64px",
+            "margin-desktop": "32px",
+            "unit": "4px",
+            "gutter": "16px"
+          },
+          "fontFamily": {
+            "label-md": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Hanken Grotesk"],
+            "headline-sm": ["Hanken Grotesk"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg": ["Hanken Grotesk"],
+            "headline-md": ["Hanken Grotesk"],
+            "display-lg": ["Hanken Grotesk"],
+            "label-sm": ["JetBrains Mono"],
+            "body-md": ["Inter"]
+          },
+          "fontSize": {
+            "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .bento-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .bento-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    .pillar-image-overlay {
+      background: linear-gradient(0deg, rgba(25, 28, 30, 0.9) 0%, rgba(25, 28, 30, 0.4) 100%);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<header class="fixed top-0 w-full h-top-nav-height z-50 flex items-center justify-between px-margin-desktop bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<img alt="LogiQ-On Tech Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDezTGrJxr0dFsP-Ia_9btthhEibLgZQf7ljTG_TdMzuWMLwo6O7e3kC7JmgLF8tFGIWm-D6hULz9PBPQh4f2nhIBOYBDcqA-WyZZb1V57d8SoKwBfUr4rYXdjxrNOT30lXPEnY9xom0GKHc-iMv-eADJlSeDDCZ3ezD8gHTbPKAkDXsZ7wDA9fylMNg_0QjUw934ACaXGVnowM0D8vVXiM1Lx4wNNB41ryPs5zFmX4leAe6CUgp5nvGkoT1VrZWFGZ3Evx-_mApow"/>
+</div>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Products</a>
+<a class="font-label-md text-label-md text-secondary hover:text-on-background transition-colors" href="#">Solutions</a>
+<a class="font-label-md text-label-md text-secondary hover:text-on-background transition-colors" href="#">Industries</a>
+<a class="font-label-md text-label-md text-secondary hover:text-on-background transition-colors" href="#">Partners</a>
+<a class="font-label-md text-label-md text-secondary hover:text-on-background transition-colors" href="#">Retail</a>
+<a class="font-label-md text-label-md text-secondary hover:text-on-background transition-colors" href="#">Buzz</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2 pr-4 border-r border-outline-variant">
+<button class="font-label-md text-label-md text-secondary hover:text-primary transition-colors">Login</button>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm">
+      Get Demo
+    </button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:bg-surface-container p-2 rounded-full transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:bg-surface-container p-2 rounded-full transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-top-nav-height">
+<!-- Hero Section -->
+<section class="relative min-h-[75vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="High-tech automated logistics center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKbxRYIneQE6rES7RXw5Hi9Ix9Z0i1HvonoFMFrUptKPTcw0BvReea8UBiGiFIMbk7syWLdb2MKKaEEwA9vz-RrGnVjL5IKGpNPe_4tDHVutl2eiDCzqeB1bzIal5iaaxHxJVRxA-WWyiVFagk0XkelYV0uYKjIhThpuAM9yJ4zj0Sy2KZYciVLSZmu_yPZ_HLFXGiK_wJlalP2j37-Gyku5NrkdbWd6i6g7wdCcqSv1PaXLYb1YKhS3kY7EbLqE71NCkBiXGoSVs"/>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-20">
+<div class="max-w-3xl">
+<span class="inline-block font-label-md text-label-md text-primary tracking-widest bg-primary-fixed/30 px-3 py-1 rounded mb-6 uppercase">Industrial Precision At Scale</span>
+<h1 class="font-display-lg text-display-lg text-on-background mb-6 leading-tight">
+          The Intelligent Pulse of <br/><span class="text-primary">Modern Logistics</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+          LogiQ-On Tech orchestrates the world's most complex supply chains with real-time AI insights, seamless connectivity, and industrial-grade reliability.
+        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+            Request Demo
+          </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm hover:bg-primary/5 transition-all">
+            Request Quote
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Redesigned Core Business Pillars -->
+<section class="py-24 bg-surface" id="pillars">
+<div class="container mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-primary font-label-md uppercase tracking-[0.2em] mb-4 block">Expertise Centers</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Core Business Pillars</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+          Delivering specialized end-to-end solutions that bridge the gap between physical operations and digital intelligence.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Pillar 1: Wireless -->
+<div class="bento-card group relative h-[520px] rounded-3xl overflow-hidden shadow-sm">
+<img alt="Wireless Infrastructure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW5BB26RK7n_aEgYb285gIZtCbbXFc-XiBYKvV39noP4PQ-t9vyszAxInTts-7nNhIlGuTj7a8yCHLGK8EwlZtbHvoK5wASXy4jFrgrsFk-MFGkd8MvkFznNaknbDC7W7n8NjR1PMERc0TZ57ntakudyT_vK6r1BOkzMfC5mqYvtkKsfU5ugXfb2MxfJFXku6SFeK6Bok0YAeSaaJ2J3zdLFllQGxZCGn59S4t5xDwMXK4QX2HN3-92DI6fwGM-7mo2s93XS8fOAg"/>
+<div class="absolute inset-0 pillar-image-overlay flex flex-col justify-end p-10 text-white">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="settings_input_antenna">settings_input_antenna</span>
+</div>
+<span class="text-label-sm font-bold bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full uppercase tracking-widest">Infrastructure</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Wireless Data &amp; Infrastructure</h3>
+<p class="font-body-md text-white/80 mb-8 max-w-md">Establishing mission-critical connectivity in the toughest industrial environments through precision engineering.</p>
+<ul class="grid grid-cols-1 gap-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-primary" data-icon="verified">verified</span> Comprehensive site surveys &amp; predictive RF modeling</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-primary" data-icon="verified">verified</span> Strategic Cambium, Ruckus, &amp; Extreme Partnerships</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-primary" data-icon="verified">verified</span> High-density warehouse Wi-Fi for 100% uptime</li>
+</ul>
+<button class="w-fit flex items-center gap-2 font-label-md text-primary bg-white px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition-colors">
+            Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Pillar 2: RFID -->
+<div class="bento-card group relative h-[520px] rounded-3xl overflow-hidden shadow-sm">
+<img alt="RFID Tracking" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATPmdRtejpHfSX0Cgy8Rm6_8uDFOkGO16henG0YE-QU3Qy3s_4OcInlW4IGsjYitqYAFY1ABDxNbcg7rfvLvhf1Ww41MBS0bC2jxIRD2ZtWgiaVDQ9FzEuUzEMnq4m3vQlsKBaFs8ehPiU2CaqcppfIO12edDfIv8BOOddoFzcvBgaNitEac_cwQTS-qAhi0SRPhcqbGdmffAM_U1TYI6EH-omi_eRNuqtmAGX0xWx_8MPMrNLd42KeZSozDD8he_XANWxmzile-M"/>
+<div class="absolute inset-0 pillar-image-overlay flex flex-col justify-end p-10 text-white">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 bg-status-info rounded-2xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="sensors">sensors</span>
+</div>
+<span class="text-label-sm font-bold bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full uppercase tracking-widest">Visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">RFID &amp; Asset Tracking</h3>
+<p class="font-body-md text-white/80 mb-8 max-w-md">Eliminate blind spots with automated real-time inventory visibility and precise asset intelligence.</p>
+<ul class="grid grid-cols-1 gap-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-status-info" data-icon="verified">verified</span> Fixed reader portals &amp; automated gate solutions</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-status-info" data-icon="verified">verified</span> Advanced mobile scanners &amp; hands-free picking</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-status-info" data-icon="verified">verified</span> Real-time location tracking (RTLS) for mobile assets</li>
+</ul>
+<button class="w-fit flex items-center gap-2 font-label-md text-status-info bg-white px-6 py-3 rounded-xl hover:bg-status-info hover:text-white transition-colors">
+            Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Pillar 3: Hardware -->
+<div class="bento-card group relative h-[520px] rounded-3xl overflow-hidden shadow-sm">
+<img alt="Supply Chain Hardware" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjwbujYhd2r-67jBynbXdn-gR57i55tKBcA-wG5uSPknNGptRNvfobU4AttQ-yannHq5_z4j1L3StDpZUkd3GcYvkYRrOluHkbFdLFDbFMkuM7L9vCQSnWWqd3pcwh-F8SkbfJ2CMzU9sQQqMheg3xjA4y1GpyliooCpTpkDvi2hIH5_PDqRnRIDvJcxPRTJn4er9pwqUWhJYx6-9sB7Zb_AOHd5_SrQhhSPAD2CB0V28vN2xqbjKp5SA0IQuuw_D2M-wfbkrTGTI"/>
+<div class="absolute inset-0 pillar-image-overlay flex flex-col justify-end p-10 text-white">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="devices">devices</span>
+</div>
+<span class="text-label-sm font-bold bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full uppercase tracking-widest">Hardware</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Supply Chain Hardware</h3>
+<p class="font-body-md text-white/80 mb-8 max-w-md">Ruggedized, enterprise-grade equipment built to withstand the harshest industrial edge environments.</p>
+<ul class="grid grid-cols-1 gap-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-outline" data-icon="verified">verified</span> Enterprise-grade rugged computers &amp; tablets</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-outline" data-icon="verified">verified</span> Ergonomic handheld laser &amp; imager scanners</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-outline" data-icon="verified">verified</span> Heavy-duty vehicle-mounted terminals &amp; hardware</li>
+</ul>
+<button class="w-fit flex items-center gap-2 font-label-md text-on-background bg-white px-6 py-3 rounded-xl hover:bg-on-background hover:text-white transition-colors">
+            Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Pillar 4: Services -->
+<div class="bento-card group relative h-[520px] rounded-3xl overflow-hidden shadow-sm">
+<img alt="Integration Services" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbwT0HXm7EvvmS42P_dyq8kGp7fBhm4q1d9xDSDg1Bu884RIHXSMJamzJk1D-4hF0qjLf2FlLS-LtVOAfFnSYi6Bwv_U8CD5VqIGvGOpS0Oux2nqHweib3qwVmy8UP84_tJ9vxbDg1wYb2yvfk2-Vhjbbo1s2qvdHH3pems-4ybdnRYI1DKk6IUWmFA6H-vwevdtNYxTCUpAnIBggkcZiBjAeljjZPzLnlToLTJxw_I4EVa1QjcGCPeMQM-CZHPZKMkN13D-vL0dY"/>
+<div class="absolute inset-0 pillar-image-overlay flex flex-col justify-end p-10 text-white">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 bg-tertiary rounded-2xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="integration_instructions">integration_instructions</span>
+</div>
+<span class="text-label-sm font-bold bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full uppercase tracking-widest">Services</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Integration &amp; Enterprise Services</h3>
+<p class="font-body-md text-white/80 mb-8 max-w-md">Seamless software orchestration between edge data collection and core enterprise systems.</p>
+<ul class="grid grid-cols-1 gap-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-tertiary-fixed" data-icon="verified">verified</span> Mobile Device Management (MDM) deployment &amp; management</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-tertiary-fixed" data-icon="verified">verified</span> Modern Terminal Emulation (TE) modernization</li>
+<li class="flex items-center gap-3 text-body-sm"><span class="material-symbols-outlined text-tertiary-fixed" data-icon="verified">verified</span> Deep WMS/ERP system integration &amp; optimization</li>
+</ul>
+<button class="w-fit flex items-center gap-2 font-label-md text-tertiary bg-white px-6 py-3 rounded-xl hover:bg-tertiary hover:text-white transition-colors">
+            Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sector Solutions -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/30">
+<div class="container mx-auto px-margin-desktop">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Sector Solutions</h2>
+<p class="font-body-md text-on-surface-variant">Tailored logistics logic for industry-specific demands.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-label-md hover:underline">
+          View All Industries <span class="material-symbols-outlined" data-icon="arrow_outward">arrow_outward</span>
+</button>
+</div>
+<div class="overflow-hidden rounded-xl border border-outline-variant bg-white shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-on-background text-surface-bright">
+<th class="p-6 font-label-md text-label-md uppercase tracking-wider">Industry Sector</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-wider">Core Focus</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-wider">Efficiency Gain</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-wider">Active Status</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="p-6 font-bold text-on-background">Automotive Manufacturing</td>
+<td class="p-6">Rugged Hardware &amp; JIT Components</td>
+<td class="p-6 text-status-success font-bold">+28%</td>
+<td class="p-6">
+<span class="px-3 py-1 rounded-full bg-status-success/15 text-status-success text-xs font-bold uppercase tracking-wider">Optimized</span>
+</td>
+<td class="p-6"><button class="text-primary font-bold hover:underline">Explore Case Study</button></td>
+</tr>
+<tr class="bg-surface-bright border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="p-6 font-bold text-on-background">Pharmaceutical Cold Chain</td>
+<td class="p-6">RFID Sensors &amp; Infrastructure</td>
+<td class="p-6 text-status-success font-bold">+15%</td>
+<td class="p-6">
+<span class="px-3 py-1 rounded-full bg-status-info/15 text-status-info text-xs font-bold uppercase tracking-wider">Scaling</span>
+</td>
+<td class="p-6"><button class="text-primary font-bold hover:underline">Explore Case Study</button></td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="p-6 font-bold text-on-background">Consumer Electronics</td>
+<td class="p-6">WMS Integration &amp; Peak Scaling</td>
+<td class="p-6 text-status-success font-bold">+42%</td>
+<td class="p-6">
+<span class="px-3 py-1 rounded-full bg-status-success/15 text-status-success text-xs font-bold uppercase tracking-wider">Optimized</span>
+</td>
+<td class="p-6"><button class="text-primary font-bold hover:underline">Explore Case Study</button></td>
+</tr>
+<tr class="bg-surface-bright hover:bg-surface-container transition-colors">
+<td class="p-6 font-bold text-on-background">Global Retail Chains</td>
+<td class="p-6">Handheld Scanners &amp; Omni-channel</td>
+<td class="p-6 text-status-success font-bold">+33%</td>
+<td class="p-6">
+<span class="px-3 py-1 rounded-full bg-status-warning/15 text-status-warning text-xs font-bold uppercase tracking-wider">Upgrading</span>
+</td>
+<td class="p-6"><button class="text-primary font-bold hover:underline">Explore Case Study</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Modern Partners Banner -->
+<section class="py-16 bg-white overflow-hidden border-b border-outline-variant/30">
+<div class="container mx-auto px-margin-desktop mb-8 text-center">
+<p class="text-label-sm font-bold text-secondary uppercase tracking-[0.3em]">Industry Leading Partners</p>
+</div>
+<div class="flex items-center gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-700 animate-[scroll_50s_linear_infinite]">
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">CAMBIUM NETWORKS</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">RUCKUS WIRELESS</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">EXTREME NETWORKS</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">ZEBRA TECHNOLOGIES</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">HONEYWELL SAFETY</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">SIEMENS DIGITAL</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">CISCO INDUSTRIAL</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">IVANTI WAVELINK</span>
+<!-- Repeat for smooth scroll -->
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">CAMBIUM NETWORKS</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">RUCKUS WIRELESS</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">EXTREME NETWORKS</span>
+<span class="font-headline-sm whitespace-nowrap text-on-background/40 font-bold px-12">ZEBRA TECHNOLOGIES</span>
+</div>
+</section>
+<!-- Redesigned Partners Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Strategic Ecosystem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+          We leverage the world's most reliable technology manufacturers to deliver enterprise-grade performance.
+        </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">HONEYWELL</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Hardware Partner</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">ZEBRA</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">RFID &amp; Scanners</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">CISCO</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Network Edge</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">SIEMENS</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Automation</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">CAMBIUM</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Wireless</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">RUCKUS</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Wi-Fi Systems</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">EXTREME</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Data Center</span>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center justify-center border border-outline-variant/40 hover:border-primary/40 hover:shadow-lg transition-all gap-4 group text-center h-48">
+<span class="font-headline-sm text-on-background tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">IVANTI</span>
+<div class="h-1 w-8 bg-primary/20 group-hover:w-16 transition-all"></div>
+<span class="text-[11px] text-primary font-bold uppercase tracking-widest">Services &amp; TE</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-margin-desktop px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col gap-6 max-w-sm">
+<div class="flex items-center gap-2">
+<img alt="LogiQ-On Tech Logo" class="h-8 w-auto grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDezTGrJxr0dFsP-Ia_9btthhEibLgZQf7ljTG_TdMzuWMLwo6O7e3kC7JmgLF8tFGIWm-D6hULz9PBPQh4f2nhIBOYBDcqA-WyZZb1V57d8SoKwBfUr4rYXdjxrNOT30lXPEnY9xom0GKHc-iMv-eADJlSeDDCZ3ezD8gHTbPKAkDXsZ7wDA9fylMNg_0QjUw934ACaXGVnowM0D8vVXiM1Lx4wNNB41ryPs5zFmX4leAe6CUgp5nvGkoT1VrZWFGZ3Evx-_mApow"/>
+</div>
+<p class="font-body-sm text-on-surface-variant">
+      Architecting the future of industrial logistics. Our platform integrates physical assets with digital intelligence to create a seamless global supply chain.
+    </p>
+<div class="text-label-sm text-on-surface-variant">
+      © 2024 LogiQ-On Tech. Industrial Precision.
+    </div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-background uppercase tracking-widest">Navigation</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">Home</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">About</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">Solutions</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">Careers</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-background uppercase tracking-widest">Connect</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">Contact</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">Privacy Policy</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all hover:underline decoration-primary" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-background uppercase tracking-widest">Login Portal</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-sm text-primary font-bold hover:underline" href="#">Customer Login</a>
+<a class="font-body-sm text-primary font-bold hover:underline" href="#">Vendor Login</a>
+</nav>
+</div>
+</div>
+</footer>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+</body></html>

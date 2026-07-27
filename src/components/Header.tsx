@@ -11,6 +11,15 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  if (
+    pathname?.startsWith("/portal") ||
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname === "/customer-login" ||
+    pathname === "/vendor-login"
+  )
+    return null;
+
   return (
     <>
       <header className="site-header">
@@ -26,8 +35,7 @@ export default function Header() {
           <div className="header-actions">
             <Link
               href="/login"
-              className="btn btn-primary"
-              style={{ padding: "9px 20px", fontSize: 14 }}
+              className="btn-liquid-login"
             >
               <svg
                 viewBox="0 0 24 24"

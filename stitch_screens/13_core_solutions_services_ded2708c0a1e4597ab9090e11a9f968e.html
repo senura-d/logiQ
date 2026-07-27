@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Hanken+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#006388",
+                    "outline": "#757686",
+                    "surface-variant": "#e1e2e4",
+                    "secondary-container": "#e4e2e3",
+                    "status-info": "#5770FF",
+                    "on-secondary-fixed-variant": "#474647",
+                    "status-success": "#10B981",
+                    "tertiary-fixed-dim": "#87cffb",
+                    "surface-tint": "#324ddd",
+                    "secondary-fixed": "#e4e2e3",
+                    "surface-container": "#edeef0",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#bbc3ff",
+                    "data-viz-cyan": "#8BD3FF",
+                    "on-tertiary-fixed-variant": "#004c6a",
+                    "surface-container-highest": "#e1e2e4",
+                    "status-warning": "#F59E0B",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-primary-fixed-variant": "#0a30c6",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#fcfcff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f4f6",
+                    "outline-variant": "#c5c5d7",
+                    "primary": "#2f4adb",
+                    "inverse-surface": "#2e3132",
+                    "primary-container": "#4c66f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9fb",
+                    "status-error": "#EF4444",
+                    "secondary": "#5f5e5f",
+                    "brand-accent-purple": "#8110FF",
+                    "secondary-fixed-dim": "#c8c6c7",
+                    "on-surface-variant": "#444655",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-container": "#656465",
+                    "on-tertiary-fixed": "#001e2d",
+                    "tertiary-fixed": "#c5e7ff",
+                    "on-surface": "#191c1e",
+                    "tertiary-container": "#2c7ca4",
+                    "surface-container-high": "#e7e8ea",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9fb",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed": "#000f5c",
+                    "surface-dim": "#d9dadc",
+                    "surface": "#f8f9fb",
+                    "on-secondary-fixed": "#1b1b1c",
+                    "primary-fixed-dim": "#bbc3ff",
+                    "primary-fixed": "#dee0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "sidebar-width": "260px",
+                    "gutter": "16px",
+                    "top-nav-height": "64px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(117, 118, 134, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-surface-container-lowest border-b border-outline-variant z-50">
+<nav class="flex justify-between items-center h-top-nav-height px-margin-desktop max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                LogiQ-On Tech
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary hover:text-primary transition-colors font-medium" href="#">Products</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-medium" href="#">Solutions</a>
+<a class="text-secondary hover:text-primary transition-colors font-medium" href="#">Industries</a>
+<a class="text-secondary hover:text-primary transition-colors font-medium" href="#">Partners</a>
+<a class="text-secondary hover:text-primary transition-colors font-medium" href="#">Retail</a>
+<a class="text-secondary hover:text-primary transition-colors font-medium" href="#">Buzz</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-opacity">search</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-opacity">language</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">Contact Us</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="relative rounded-xl overflow-hidden h-[500px] flex items-center p-12 bg-inverse-surface">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Global supply chain visualization with glowing data nodes and connections in professional blue and slate tones." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLudFoYUKE1hFQb7N9mMTeDNJ_7YrRN-OmOU6l93I1_1DaJqTa_K6uQFBK5xNJKU1z-Iqeu-vZdJ9txbaOFA9SXtZ-rLguvb98Dn7hQxluidSp3Dtclh3QPKnEabubUfJWKCv3y65i7M8oDu6GKV0Y86fn2IPomw5nJKivn0KLNE4dG916rTsJ4pbr8et-cngL4JpWmb_VKFeu8vLlItj9roYny2kUfXpO9IXZU7ttmgKNzggUNGCBDQPfs"/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="font-label-md text-label-md text-primary-fixed-dim tracking-widest uppercase mb-4 block">Enterprise Service Offerings</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">Advanced Logistics Architecture & Global Integration</h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8">Deploying mission-critical wireless infrastructure and MDM ecosystems designed for the speed of modern commerce. Industrial-grade reliability from planning to execution.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold flex items-center gap-2">
+                            Explore Technical Docs
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-white px-8 py-3 rounded-lg font-bold">Request Site Audit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Pillars (Bento Grid) -->
+<section class="mb-24">
+<h2 class="font-headline-lg text-headline-lg mb-12 text-on-surface">Precision Managed Services</h2>
+<div class="bento-grid">
+<!-- Wireless Site Surveys -->
+<div class="col-span-12 md:col-span-8 bg-white border border-outline-variant p-10 rounded-xl relative overflow-hidden flex flex-col justify-between hover:border-primary transition-all duration-300">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">wifi_tethering</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Wireless Site Surveys</h3>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-xl mb-8">LogiQ-On utilizes the industry-leading Ekahau Sidekick® and predictive coverage modeling to eliminate dead zones in complex warehouse environments. Our technical process involves rigorous signal-to-noise ratio analysis and interference mitigation.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-primary uppercase block mb-2">Technique</span>
+<span class="font-body-md font-bold block">AP-on-a-Stick (APoaS)</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-primary uppercase block mb-2">Metrics</span>
+<span class="font-body-md font-bold block">RSSI & SNR Validation</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-primary uppercase block mb-2">Output</span>
+<span class="font-body-md font-bold block">Heatmap Heatmap Documentation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MDM Solutions -->
+<div class="col-span-12 md:col-span-4 bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white">phonelink_setup</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">MDM Ecosystems</h3>
+<p class="font-body-sm opacity-90 mb-8">Consolidated management of ruggedized terminals, scanners, and tablets across global locations. We deploy SOTI MobiControl and Ivanti Neurons for zero-touch provisioning.</p>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-body-sm"><span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span> Remote OS Updates</li>
+<li class="flex items-center gap-2 font-body-sm"><span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span> Device Geofencing</li>
+<li class="flex items-center gap-2 font-body-sm"><span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span> Lockdown Mode / Kiosk</li>
+</ul>
+</div>
+<!-- System Integration -->
+<div class="col-span-12 md:col-span-6 bg-white border border-outline-variant p-10 rounded-xl flex items-start gap-8">
+<div class="shrink-0 w-16 h-16 bg-surface-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-3xl">hub</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-3">System Integration</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Seamlessly connecting warehouse management systems (WMS) with edge device hardware. We handle API architecture and ERP data synchronization protocols.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface-variant">SAP EWM</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface-variant">Manhattan WM</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface-variant">Oracle Cloud</span>
+</div>
+</div>
+</div>
+<!-- Technical Support -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-highest p-10 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-sm text-headline-sm mb-3">L3 Technical Support</h3>
+<p class="font-body-md text-on-surface-variant mb-4">A 24/7 dedicated Network Operation Center (NOC) monitoring throughput and latency across your entire facility footprint.</p>
+<a class="text-primary font-bold inline-flex items-center gap-1 hover:underline" href="#">View SLA Metrics <span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[180px] text-outline opacity-5 rotate-12">support_agent</span>
+</div>
+</div>
+</section>
+<!-- Modernization Deep Dive -->
+<section class="py-20 bg-white rounded-2xl border border-outline-variant mb-24">
+<div class="px-10">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg mb-6">Terminal Emulation Modernization</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Migrating legacy "Green Screen" (VT100/5250) applications into modern, high-productivity Android interfaces. Our conversion process reduces training time by 40% while increasing scanning accuracy.</p>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="w-1 h-auto bg-primary rounded-full"></div>
+<div>
+<h4 class="font-bold text-on-surface mb-2">Phase 1: Automated Scripting</h4>
+<p class="font-body-sm text-on-surface-variant">Injecting modern UI logic into legacy sessions via Ivanti Velocity, mapping function keys to touch-optimized buttons.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 h-auto bg-tertiary rounded-full"></div>
+<div>
+<h4 class="font-bold text-on-surface mb-2">Phase 2: Data Parsing</h4>
+<p class="font-body-sm text-on-surface-variant">Refactoring data fields for real-time validation, preventing incorrect barcode entry at the source.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 h-auto bg-outline rounded-full"></div>
+<div>
+<h4 class="font-bold text-on-surface mb-2">Phase 3: Multi-Modal Integration</h4>
+<p class="font-body-sm text-on-surface-variant">Adding voice-to-pick and augmented reality overlays to the terminal environment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/50 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<span class="font-label-md text-label-md text-secondary">PREDICTIVE COVERAGE MODEL v4.2</span>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-status-success"></div>
+<div class="w-2 h-2 rounded-full bg-status-success"></div>
+<div class="w-2 h-2 rounded-full bg-status-warning"></div>
+</div>
+</div>
+<!-- Mock Diagram Area -->
+<div class="aspect-video bg-inverse-surface rounded-lg relative overflow-hidden flex flex-col p-4">
+<div class="grid grid-cols-12 grid-rows-6 h-full gap-2 opacity-20">
+<div class="col-span-2 row-span-2 border border-white"></div>
+<div class="col-span-3 row-span-4 border border-white translate-x-4 translate-y-4"></div>
+<div class="col-span-2 row-span-3 border border-white"></div>
+<div class="col-span-5 row-span-2 border border-white"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -inset-12 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+<span class="material-symbols-outlined text-primary text-6xl relative z-10">radar</span>
+</div>
+</div>
+<div class="mt-auto flex justify-between text-[10px] font-label-md text-white/50">
+<span>COORD: 34.0522° N, 118.2437° W</span>
+<span>SIGNAL: -45dBm</span>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="p-3 bg-white rounded border border-outline-variant">
+<div class="text-[10px] text-outline font-label-md mb-1">LATENCY</div>
+<div class="font-bold text-lg">12ms</div>
+</div>
+<div class="p-3 bg-white rounded border border-outline-variant">
+<div class="text-[10px] text-outline font-label-md mb-1">PKT LOSS</div>
+<div class="font-bold text-lg text-status-success">0.02%</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Area -->
+<section class="text-center py-16 bg-surface-container rounded-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Ready to optimize your facility?</h2>
+<p class="font-body-md text-on-surface-variant mb-8 max-w-xl mx-auto">Contact our technical sales team for a comprehensive audit of your wireless infrastructure and device fleet.</p>
+<div class="flex justify-center gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold">Schedule Consultation</button>
+<button class="bg-white border border-outline text-on-surface px-10 py-4 rounded-lg font-bold">View Case Studies</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-12 px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-4">LogiQ-On Tech</div>
+<p class="font-body-sm text-on-surface-variant">Engineering the backbone of global supply chains with precision and reliability.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-4 uppercase">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Sustainability</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Investor Relations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-4 uppercase">Support</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Global Locations</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-4 uppercase">Newsletter</h4>
+<div class="flex gap-2">
+<input class="bg-white border border-outline-variant rounded p-2 text-sm w-full outline-none focus:border-primary" placeholder="Your work email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded"><span class="material-symbols-outlined text-[20px]">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop py-6 border-t border-outline-variant/30 text-center">
+<p class="font-body-sm text-on-surface-variant">© 2024 LogiQ-On Tech. All rights reserved. Industrial Grade Reliability.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the radar pulse in the mock diagram
+        document.addEventListener('DOMContentLoaded', () => {
+            const radarContainer = document.querySelector('.animate-pulse');
+            if (radarContainer) {
+                setInterval(() => {
+                    radarContainer.classList.toggle('scale-110');
+                }, 2000);
+            }
+        });
+    </script>
+</body></html>

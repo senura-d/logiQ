@@ -86,8 +86,6 @@ export default function AboutPage() {
         lede="We're a Melbourne-founded team that's spent since 2020 sourcing, installing, and supporting the barcode, RFID, wireless, and signage technology that keeps Australian warehouses, retailers, and logistics operators moving."
         image="/images/pexels/home-warehouse-aisle.jpg"
         imageAlt="LogiQ-On warehouse operations and automated supply chain infrastructure"
-        primary={{ label: "Request Demo", href: "/request-demo" }}
-        secondary={{ label: "Talk to the Team", href: "/contact" }}
       />
 
       <GsapSection id="mission" className="bg-surface" fullScreen>

@@ -512,7 +512,7 @@ export default function HomePage() {
 </TextAnimate>
 <Link
   href="/contact"
-  className="gsap-animate inline-block bg-slate-950 hover:bg-slate-800 text-white !text-white font-bold text-base px-9 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105 mt-12"
+  className="gsap-animate inline-block bg-slate-950 hover:bg-slate-800 text-white font-bold text-base px-9 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105 mt-12"
   style={{ color: "#ffffff" }}
 >
   Contact Us

@@ -72,6 +72,66 @@ const STATS = [
   { value: "1", label: "Accountable Partner", icon: "handshake" },
 ];
 
+const MANAGEMENT = [
+  {
+    name: "David Miller",
+    role: "Founder & Chief Executive Officer",
+    category: "Management",
+    bio: "20+ years leading ANZ warehouse automation and enterprise logistics hardware rollouts. Formerly senior operations advisor across tier-1 supply chains.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
+    expertise: ["Supply Chain Strategy", "Enterprise RFID", "Warehouse Automation"],
+    email: "david.miller@logiqon.com.au",
+  },
+  {
+    name: "Sarah Jenkins",
+    role: "Chief Technology Officer & Head of Solutions",
+    category: "Management",
+    bio: "Ex-Zebra Technologies Principal Solutions Architect. Specialises in edge device integration, real-time location systems (RTLS), and rugged hardware topology.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+    expertise: ["Hardware Architecture", "RTLS & RFID Systems", "WMS Middleware"],
+    email: "sarah.jenkins@logiqon.com.au",
+  },
+  {
+    name: "Marcus Vance",
+    role: "Director of Operations & Site Deployments",
+    category: "Management",
+    bio: "Oversees field engineering, industrial RF site surveys, and seamless go-live rollouts for distribution centres across Australia and New Zealand.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+    expertise: ["Field Engineering", "RF Site Surveys", "Turnkey Rollouts"],
+    email: "marcus.vance@logiqon.com.au",
+  },
+];
+
+const CONSULTANTS = [
+  {
+    name: "Dr. Evelyn Thorne",
+    role: "Principal RFID & Automation Consultant",
+    category: "Consultant",
+    bio: "Specialist in high-density RFID portal designs and automated sorting. PhD in Industrial Automation with over 15 years advising FMCG and cold-storage operations.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+    expertise: ["Automated Portals", "Cold Chain RFID", "IoT Sensor Grids"],
+    email: "evelyn.thorne@logiqon.com.au",
+  },
+  {
+    name: "Liam O'Connor",
+    role: "Senior WMS & Integration Strategist",
+    category: "Consultant",
+    bio: "Deep expertise connecting rugged mobile computers and vision systems into SAP Extended Warehouse Management (EWM), Manhattan Associates, and Oracle WMS.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+    expertise: ["SAP EWM Integration", "Manhattan Associates", "Barcode Data Capture"],
+    email: "liam.oconnor@logiqon.com.au",
+  },
+  {
+    name: "Rachel Chen",
+    role: "Retail Supply Chain & Digital Signage Advisor",
+    category: "Consultant",
+    bio: "Guides major Australian retailers through item-level RFID inventory tagging, interactive kiosk systems, and omnichannel store fulfillment architecture.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+    expertise: ["Item-Level Tagging", "Omnichannel Logistics", "Interactive Signage"],
+    email: "rachel.chen@logiqon.com.au",
+  },
+];
+
 export default function AboutPage() {
   return (
     <div>
@@ -191,6 +251,134 @@ export default function AboutPage() {
                 <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </GsapSection>
+
+      {/* Dedicated Management and Consultants Section */}
+      <GsapSection id="management-consultants" className="bg-white border-b border-slate-200 py-20" fullScreen={false}>
+        <div className="container mx-auto px-margin-desktop">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <SectionIntro
+              eyebrow="Leadership & Experts"
+              title="Management and Consultants"
+              lede="Our leadership team and senior technical advisors combine decades of floor-level warehouse experience, hardware architecture, and enterprise supply chain engineering."
+              ledeWidth="3xl"
+            />
+          </div>
+
+          {/* Subsection 1: Executive Management */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8 pb-3 border-b border-slate-200">
+              <div className="w-9 h-9 rounded-lg bg-slate-950 flex items-center justify-center text-white">
+                <span className="material-symbols-outlined text-xl">manage_accounts</span>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-950 tracking-tight">Executive Management</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {MANAGEMENT.map((person) => (
+                <div
+                  key={person.name}
+                  className="gsap-animate group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-slate-400 transition-all duration-300 flex flex-col"
+                >
+                  <div className="relative h-64 w-full bg-slate-200 overflow-hidden">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                      {person.category}
+                    </div>
+                  </div>
+                  <div className="p-7 flex-1 flex flex-col justify-between bg-white">
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-950 mb-1">{person.name}</h4>
+                      <p className="text-xs font-semibold text-indigo-600 mb-4">{person.role}</p>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-6">{person.bio}</p>
+                    </div>
+
+                    <div>
+                      <div className="flex flex-wrap gap-1.5 mb-6">
+                        {person.expertise.map((item) => (
+                          <span
+                            key={item}
+                            className="bg-slate-100 text-slate-700 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="inline-flex items-center gap-2 text-xs font-bold text-slate-900 hover:text-indigo-600 transition-colors"
+                      >
+                        <span className="material-symbols-outlined text-base">mail</span> {person.email}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Subsection 2: Senior Consultants */}
+          <div>
+            <div className="flex items-center gap-3 mb-8 pb-3 border-b border-slate-200">
+              <div className="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+                <span className="material-symbols-outlined text-xl">psychology</span>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-950 tracking-tight">Senior Advisory Consultants</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {CONSULTANTS.map((person) => (
+                <div
+                  key={person.name}
+                  className="gsap-animate group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-slate-400 transition-all duration-300 flex flex-col"
+                >
+                  <div className="relative h-64 w-full bg-slate-200 overflow-hidden">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute top-4 right-4 bg-indigo-600/90 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                      {person.category}
+                    </div>
+                  </div>
+                  <div className="p-7 flex-1 flex flex-col justify-between bg-white">
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-950 mb-1">{person.name}</h4>
+                      <p className="text-xs font-semibold text-indigo-600 mb-4">{person.role}</p>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-6">{person.bio}</p>
+                    </div>
+
+                    <div>
+                      <div className="flex flex-wrap gap-1.5 mb-6">
+                        {person.expertise.map((item) => (
+                          <span
+                            key={item}
+                            className="bg-indigo-50 text-indigo-700 text-[11px] font-medium px-2.5 py-1 rounded-md border border-indigo-100"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="inline-flex items-center gap-2 text-xs font-bold text-slate-900 hover:text-indigo-600 transition-colors"
+                      >
+                        <span className="material-symbols-outlined text-base">mail</span> {person.email}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </GsapSection>

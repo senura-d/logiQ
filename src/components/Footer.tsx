@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Brand from "./Brand";
+import SocialLinks from "./SocialLinks";
 
 const FOOTER_COLUMNS = [
   {

@@ -16,6 +16,17 @@ export const NAV_LINKS: NavLink[] = [
   { key: "contact", label: "Contact Us", href: "/contact" },
 ];
 
+export type SocialLink = {
+  key: "facebook" | "instagram";
+  label: string;
+  href: string;
+};
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  { key: "facebook", label: "Facebook", href: "https://www.facebook.com/LogiqOnTech" },
+  { key: "instagram", label: "Instagram", href: "https://www.instagram.com/logiqontech/" },
+];
+
 export const UTILITY_LINKS: NavLink[] = [
   { key: "request-demo", label: "Request Demo", href: "/request-demo" },
   { key: "request-quote", label: "Request Quote", href: "/request-quote" },

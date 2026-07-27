@@ -111,6 +111,12 @@ export default function Footer() {
                 info@logiqon.com.au
               </a>
             </div>
+
+            {/* Social Media Buttons (FB & IG) */}
+            <div className="mt-5">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">Follow Us</p>
+              <SocialLinks />
+            </div>
           </div>
 
           {/* Link columns */}
@@ -134,13 +140,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-8 pt-5 border-t border-slate-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+        <div className="mt-8 pt-5 border-t border-slate-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-xs text-slate-600">
             &copy; 2026 LogiQ-On Technology Group Pty Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-slate-600">
-            Melbourne, Victoria &middot; Prices in AUD &middot; Australia-wide service
-          </p>
+          <div className="flex items-center gap-6">
+            <p className="text-xs text-slate-600">
+              Melbourne, Victoria &middot; Prices in AUD &middot; Australia-wide service
+            </p>
+            <SocialLinks />
+          </div>
         </div>
       </div>
     </footer>
